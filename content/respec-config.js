@@ -7,7 +7,7 @@ var respecConfig = {
     permalinkHide:     false,
     tocIntroductory: true,
     // specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-    specStatus:           "FPWD",
+    specStatus:           "WD",
     noRecTrack: false,
     //crEnd:                "2012-04-30",
     //perEnd:               "2013-07-23",
