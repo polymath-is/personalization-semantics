@@ -6,7 +6,7 @@
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
 		<script src="../common/biblio.js" class="remove"></script>
 		<script src="respec-config.js" class="remove"></script>
-	
+
 		<link href="../common/css/common.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
@@ -28,34 +28,330 @@
 			<section data-include="use-cases.html" data-include-replace="true" id="use-cases"></section>
 		</section>
 
-		<section id="vocabulary">
-			<h1>Vocabulary for additional help and support</h1>
-			
-				<section data-include="vocabulary.html" data-include-replace="true" id="literal"></section>
-			</section>
+		<section id="Vocabulary">
+			<h1>Properties</h1>
+					<section>
+						<h2>Alternative</h2>
+						<div class="property-description">
+								<p>Would be used on an alternative content as an alternative to more detailed or difficult to understand content. <code>alternative</code> can be used on a span, div, link or image that servers as alternative content to it's direct parent element.</p>
+								<p class="ednote">This data model may be too complex, so this property could undergo substantial changes.</p>
+						</div>
+						<section>
+							<h2>Values</h2>
+							<div>
+							<p><strong>Supported values:</strong>
+							</p>
+							<ul>
+								<li>On text: easylang, explain, more, vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks</li>
+								<li>General: lessoptions. Whitespace, largefontÂ </li>
+								<li>Images: symbolic , realistic</li>
+								<li>p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&quot;&quot;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence.Â </li>
+							</ul>
+							<p>Note that there is no default value.</p>
+					</div>
+		      <table class="value-descriptions">
+		          <thead>
+		            <tr>
+		              <th scope="col">Value</th>
+		              <th scope="col">Description</th>
+		            </tr>
+		          </thead>
+		          <tbody>
+		            <tr>
+		              <th class="value-name" scope="row">active</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">chunks</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">easylang</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">explain</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">largefont</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">lessoptions</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">literal</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">more</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">numberfree</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">p0</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">p1</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">p1</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">p2</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">p3</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">realistic</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">smallsentences</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">symbolic </th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">vocab1000</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">vocab2000</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">vocab500</th>
+		              <td class="value-description"></td>
+		            </tr>
+		            <tr>
+		              <th class="value-name" scope="row">whitespace</th>
+		              <td class="value-description"></td>
+		            </tr>
+		          </tbody>
+		        </table>
+					</section>
+				</section><!-- Alternative -->
+					<section id="helptype">
+						<h2>Helptype</h2>
+						<div class="property-description">
+									<p>Would be used on additional content to indicate the type of extra help provided. <code>helptype</code> can be used on a span, div, link or image that provides or redirects the user to additional help information.</p>
+						</div>
+						<section>
+				    	<h2>Characteristics</h2>
+				    	<table class="property-features">
+									<thead>
+										<tr>
+											<th scope="col">Characteristic</th>
+											<th scope="col">Value</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="property-related-head" scope="row">Related Concepts:</th>
+											<td class="property-related"><cite><a href="https://www.w3.org/TR/SVG2/"><abbr title="Scalable Vector Graphics">SVG</abbr></a></cite> [[SVG2]] and <cite><a href="https://www.w3.org/TR/dom/"><abbr title="Document Object Model">DOM</abbr></a></cite> [[DOM4]] active</td>
+										</tr>
+										<tr>
+											<th class="property-applicability-head" scope="row">Used in Roles:</th>
+											<td class="property-applicability">All elements of the base markup</td>
+										</tr>
+										<tr>
+											<th class="property-descendants-head" scope="row">Inherits into Roles:</th>
+											<td class="property-descendants">Placeholder</td>
+										</tr>
+										<tr>
+											<th class="property-value-head" scope="row">Value:</th>
+											<td class="property-value"><a href="#valuetype_token">token</a></td>
+										</tr>
+									</tbody>
+								</table>
+				    </section>
+						<section>
+				    	<h2>Values</h2>
+				    	<table class="value-descriptions">
+									<thead>
+										<tr>
+											<th scope="col">Value</th>
+											<th scope="col">Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="value-name" scope="row">automated</th>
+											<td class="value-description">provides an alternative step by step sequence for completing a task or procedure.</td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">dictionary</th>
+											<td class="value-description">provides a definition of the term or topic. May redirect to another uri or provide the information in-line, via a popup, or other method.</td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">faqs</th>
+											<td class="value-description">redirects to a FAQ page with the related topic in view. </td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">glossary</th>
+											<td class="value-description">provides a uri to a glossary page with the related topic in view.</td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">helpform</th>
+											<td class="value-description">Used with forms when the user may need more or simplified information about the type of information being requested. Provides with a modified form with more information about each requested item.</td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">humanhelp</th>
+											<td class="value-description">Provides the user with access to human help. This may be through a live chat, providing a phone number to call for human assistance, or other mechanism to reach a person for direct assistance. </td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">morehelp</th>
+											<td class="value-description">Provides a more detailed explanation about the current topic or process.</td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">simplified</th>
+											<td class="value-description"><em>propose this should be easylang rather than simplified.</em>  Provides, a version of the content that is easier to read and understand.</td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">thesaurus</th>
+											<td class="value-description">provides a list of synonyms for the current term.  May redirect to another uri or provide a list of synonyms in-line, via a popup, or other method. </td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">tooltips</th>
+											<td class="value-description">offers an option of adding tooltips to provide morehelp with more detailed information about the current topic or process. </td>
+										</tr>
+										<tr>
+											<th class="value-name" scope="row">topicsearch</th>
+											<td class="value-description">provides a uri for the user to perform a search on the current topic with the suggested search term included.</td>
+										</tr>
+									</tbody>
+								</table>
+				    </section>
+					</section><!-- helptype -->
+					<section id="literal-explanation">
+						<h2>Literal</h2>
+					<section>
+
+							<div class="property-description">
+										<p><code>literal</code> provides alternative text for people who prefer content that does not use non literal text, such as metaphors.</p>
+										<p>A personalization agent may replace the content with the literal alternative, or it may put the literal alternative in a tooltip.</p>
+										<p>User agents may also render non-literal text in a different way so that users will be able to identify non literal content. They can then use a mouse over or other technique to receive the alternative. </p>
+										<p>A user agent must be able to replace the non literal content with the literal alternative without loss of meaning.</p>
+										<p><strong>Supported value: </strong>String</p>
+										<p>Note that there is no default value.</p>
+									</div>
+						</section>
+					    <section>
+					    	<h3>Characteristics</h3>
+					    	<table class="property-features">
+										<thead>
+											<tr>
+												<th scope="col">Characteristic</th>
+												<th scope="col">Value</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th class="property-related-head" scope="row">Related Concepts:</th>
+												<td class="property-related">Alt text</td>
+											</tr>
+											<tr>
+												<th class="property-applicability-head" scope="row">Used in Roles:</th>
+												<td class="property-applicability">All elements of the base markup</td>
+											</tr>
+											<tr>
+												<th class="property-descendants-head" scope="row">Inherits into Roles:</th>
+												<td class="property-descendants">Placeholder</td>
+											</tr>
+											<tr>
+												<th class="property-value-head" scope="row">Value:</th>
+												<td class="property-value"><a href="#valuetype_string">string</a></td>
+											</tr>
+										</tbody>
+									</table>
+					    </section>
+					</section>
+
+
+</section><!--Vocabulary -->
 			<section id="implementation">
-				
-			<h1><section id="implementation">Implementations for additional help and support</h1>
-			There are two proposed general methods to implement the help and support. The first providing help and supporting content in a different sections of content. For small inline support and changes, attributes can also sometimes  be used.
-				<section id="alternative">
-			<h2><section id="implementation">Implementation in diffrent content sections</h2>		
-			<section data-include="alternative.html" data-include-replace="true" id="alternative"></section>
-			<section data-include="helptype.html" data-include-replace="true" id="helptype"></section>
+				<h1>Example Implementations</h1>
+					<p>There are two proposed general methods to implement the help and support. The first providing help and supporting content in a different sections of content. For small inline support and changes, attributes can also sometimes  be used.</p>
+					<section>
+						<h2>Implementation in diffrent content sections</h2>
+						<section id="alternative-example">
+							<h2>Alternative</h2>
+								<p>The below example section show how <code>alternative</code> used when coding.</p>
+		    			<div class="example"><div class="example-title marker"><span>Example</span><span style="text-transform: none">: Alternative Using ARIA</span></div>
+							<pre>&lt;div&gt;
+								&lt;span aui-alternative="easylang numberfree vocab1000" class="hidden"&gt;
+		 	   	most people prefer simple text
+		  		&lt;/span&gt;
+		        	In studies it was found that only 30% of users prefer long convoluted text
+		  			with obtuse words and lots of numbers,
+				  	with 56% claiming there preferred the simplified text,
+		  	with the remainder unsure or stated it depends on the context.
+		&lt;/div&gt;</pre>
+					</div>
+					</section>
+					<section id="helptype-example">
+						<h2>Helptype</h2>
+						<p>The below example section show how <code>helptype</code> used when coding.</p>
+							<div class="example"><div class="example-title marker"><span>Example</span><span style="text-transform: none">: Helptype Using ARIA</span></div>
+								<pre>&lt;button type="button" aui-extrahelp=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</pre>
+										<p>URI 2 may read: </p>
+										<pre>&lt;div id=&quot;uri2&quot; aui-helptype=&quot;morehelp&quot; aui-hidden=&quot;true&quot;&gt;
+						pressing the undo button will erase all your work on this page.
+						Use this button with care.
+						If you press it by mistake, press control and y at the same time
+						and your answers will come back.
+					&lt;/div&gt;
+
+					&lt;a href=&quot;functiongethelp()&quot; aui-helptype=&quot;humanhelp&quot; aui-hidden=&quot;true&quot;&gt;
+						I want a person to help me&lt;/a&gt;
+
+					&lt;div id=&quot;uri3&quot; aui-extrahelp=&quot;glossary&quot; aui-hidden=&quot;true&quot;&gt;
+					</pre>
+								</div>
+
+
+
+					</section>
+
+
 				</section>
 			<section id="implementation">
-			<h2>Attributes</h2>
-				For small inline support and changes, attributes can also sometimes  be used.
-			
-			<section data-include="literal.html" data-include-replace="true" id="literal"></section>	
+			<h2>Implementation Inline</h2>
+				For small inline support and changes, attributes may be used.
+				<section>
+					<h2>Literal</h2>
+					<section id="literal-example">
+							<p>The below example section show how <code>literal</code> can be used when coding.</p>
+				    	<div class="example">
+				    		<div class="example-title marker"><span>Example:</span><span style="text-transform: none"> Symbol Using ARIA</span></div>
+						   	<pre>It is &lt;span aui-literal="raining hard">raining cats and dogs&lt;/span&gt;</pre>
+							</div>
+				    </section>
+					</section>
+<!--	<section data-include="literal.html" data-include-replace="true" id="literal"></section>
 			<section data-include="numberfree.html" data-include-replace="true" id="numberfree"></section>
 			<section data-include="easylang.html" data-include-replace="true" id="easylang"></section>
 			<section data-include="explain.html" data-include-replace="true" id="explain"></section>
 			<section data-include="feedback.html" data-include-replace="true" id="feedback"></section>
 			<section data-include="moreinfo.html" data-include-replace="true" id="moreinfo"></section>
 			<section data-include="extrahelp.html" data-include-replace="true" id="extrahelp"></section>
-			
+-->
 			</section>
-		</section>
+		</section><!-- examples -->
 
 		<section class="appendix">
 			<h2>Vocabulary Implementations</h2>
