@@ -26,8 +26,8 @@ var respecConfig = {
     // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
     // and its maturity status
     //previousPublishDate:  "",
-    //previousMaturity:  "",
-    prevRecURI: "https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20180316/",
+    //previousMaturity:  "https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20180316/",
+    //prevRecURI: "",
     //previousDiffURI: "",
 
     // if there a publicly available Editors Draft, this is the link
