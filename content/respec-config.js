@@ -25,7 +25,7 @@ var respecConfig = {
 
     // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
     // and its maturity status
-    //previousPublishDate:  "",
+    previousPublishDate:  "2018-03-16",
     previousMaturity:  "https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/",
     //prevRecURI: "",
     //previousDiffURI: "",
