@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.3.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.4.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -120,7 +120,8 @@ input.task-list-item-checkbox {
 		<title>Personalization Semantics Explainer 1.0</title>
 		
 		
-		<style id="respec-mainstyle">/*****************************************************************
+		
+	<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -459,18 +460,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-strong {
   font-weight: bold;
 }
-</style>
-		
-	
-		<link href="common/css/common.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/personalization-semantics-1.0/"><script id="initialUserConfig" type="application/json">{
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"><link rel="canonical" href="https://www.w3.org/TR/personalization-semantics-1.0/"><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "doRDFa": "1.0",
   "includePermalinks": true,
   "permalinkEdge": true,
   "permalinkHide": false,
   "tocIntroductory": true,
-  "specStatus": "ED",
+  "specStatus": "WD",
   "noRecTrack": true,
   "shortName": "personalization-semantics-1.0",
   "copyrightStart": "2017",
@@ -808,8 +805,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       ]
     }
   },
-  "publishISODate": "2018-10-14T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 14 October 2018"
+  "publishISODate": "2018-10-15T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 15 October 2018"
 }</script><meta name="description" content="Personalization involves tailoring aspects of the user experience to meet the needs and preferences of the individual user. For example, having familiar terms and symbols is key to many users being able to use the web. However, what is familiar for one user may not be familiar to another, requiring them to learn new symbols. The challenge has been the ability to identify the types of content in a document that should be adapted to the preferred user experience. The introduction of standardized semantics allows web applications to customize the presentation of that content to one that is familiar to individuals based on their specific needs and preferences. This specification defines standard semantics to enable user driven personalization. For example, the association of user-preferred symbols with elements having those semantics. This ensures that users can quickly find familiar icons, for example, a help icon, within the context of user interface elements."></head>
 	<body class="h-entry"><div class="head">
   <a href="https://www.w3.org/" class="logo">
@@ -817,15 +814,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </a>
   <h1 id="title" class="title p-name">Personalization Semantics Explainer 1.0</h1>
   
-  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-10-14">14 October 2018</time></h2>
+  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-10-15">15 October 2018</time></h2>
   <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/personalization-semantics/">https://w3c.github.io/personalization-semantics/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-1.0/">https://www.w3.org/TR/personalization-semantics-1.0/</a></dd>
+    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20181015/">https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20181015/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-1.0/">https://www.w3.org/TR/personalization-semantics-1.0/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/personalization-semantics/">https://w3c.github.io/personalization-semantics/</a></dd>
     
     
     
     
-    
+    <dt>Previous version:</dt><dd><a href="https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20180316/">https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20180316/</a></dd>
     
     <dt>Editors:</dt>
     <dd class="p-author h-card vcard" data-editor-id="16320"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard" data-editor-id="72055"><a class="ed_mailto u-email email p-name" href="mailto:charlesl@benetech.org">Charles LaPierre</a> (Benetech)</dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd><dd class="p-author h-card vcard" data-editor-id="100586"><a class="ed_mailto u-email email p-name" href="mailto:ran@w3.org">Roy Ran</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd><dd class="p-author h-card vcard" data-editor-id="2460"><span class="p-name fn">Richard Schwerdtfeger</span> (<a class="p-org org h-org h-card" href="https://www.knowbility.org/">Knowbility</a>) (Editor until October 2017)</dd>
@@ -861,7 +858,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p><p>
-          This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an Editor's Draft.
+          This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as a Working Draft.
           
           </p><p>
             
@@ -871,7 +868,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               (<a href="https://lists.w3.org/Archives/Public/public-personalization-tf/">archives</a>).
             
             </p><p>
-            Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+            Publication as a Working Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
             Membership. This is a draft document and may be updated, replaced or obsoleted by other
             documents at any time. It is inappropriate to cite this document as other than work in
             progress.
@@ -882,7 +879,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             operating under the
             <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
           
-          
+          The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
           
               <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent
               disclosures</a>
