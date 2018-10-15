@@ -910,30 +910,30 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                     <p><strong>Requirement</strong>: Not everyone can understand numbers. The <code>numberfree</code> attribute is intended as an alternative text for people who can not understand the main content.</p>
                     <p><strong>User experience:</strong></p>
                     <p>A suggested user experience would be: Numerical concepts could be rendered by the user agent slightly different so that the user knows a number free explanation is available. The user can then focus on the content and a tooltip or other disclosure mechanism would give the number free value.</p>
-                    <p>Relevant properties: <a href="#numberfree" class="respec-offending-element"><code>numberfree</code></a></p>
+                    <p>Relevant properties: <a href="#x4-2-2-numberfree" class="respec-offending-element"><code>numberfree</code></a></p>
                 </section>
                 <section id="use_case_language">
                     <h3 id="x2-2-language-type-support"><span class="secno">2.2 </span>Language Type Support<a class="self-link" aria-label="§" href="#use_case_language"></a></h3>
                     <p><strong>Requirement: </strong>Authors may want to provide a simplified version of the page or of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users. These alternative versions may not be identical in content but maintain the intent of the original content.</p>
-                    <p>Relevant properties: <a href="#alternative" class="respec-offending-element"><code>alternative</code></a>, <a href="#easylang" class="respec-offending-element"><code>easylang</code></a></p>
+                    <p>Relevant properties: <a href="#alternative-explanation" class="respec-offending-element"><code>alternative</code></a>, <a href="#easylang" class="respec-offending-element"><code>easylang</code></a></p>
                 </section>
                 <section id="use_case_literal">
                     <h3 id="x2-3-non-literal-text-and-images"><span class="secno">2.3 </span>Non-literal Text and Images<a class="self-link" aria-label="§" href="#use_case_literal"></a></h3>
                     <p><strong>Requirement: </strong>Some users cannot understand non-literal text and icons such as metaphors, idioms etc. The <code>literal</code> property is intended to identify text or images as non-literal and allows the author to explain non-literal text and images to users.</p>
                     <p><strong>User experience:</strong></p>
                     <p>A suggested user experience would be: Non-literal content could be rendered by the user agent with an indication that signifies to the user that this content should not be taken literally and that a literal explanation is available. The user can then place focus on the content and a tooltip or other disclosure mechanism would give the literal value.</p>
-                    <p>Relevant properties: <a href="#literal" class="respec-offending-element"><code>literal</code></a></p>
+                    <p>Relevant properties: <a href="#literal-explanation" class="respec-offending-element"><code>literal</code></a></p>
                 </section>
                 <section id="use_case_morehelp">
                     <h3 id="x2-4-more-help"><span class="secno">2.4 </span>More Help<a class="self-link" aria-label="§" href="#use_case_morehelp"></a></h3>
                     <p><strong>Requirement: </strong>Some users may need additional information or specifically additional help information. We propose additional properties so that an author can indicate the existence of this additional information.</p>
-                    <p>Relevant properties: <a href="#moreinfo" class="respec-offending-element"><code>moreinfo</code></a>, <a href="#extrahelp" class="respec-offending-element"><code>extrahelp</code></a>, <a href="#helptype" class="respec-offending-element">helptype</a></p>
+                    <p>Relevant properties: <a href="#moreinfo-explanation" class="respec-offending-element"><code>moreinfo</code></a>, <a href="#extrahelp" class="respec-offending-element"><code>extrahelp</code></a>, <a href="#helptype" class="respec-offending-element">helptype</a></p>
                 </section>
                 <section id="use_case_explain">
                     <h3 id="x2-5-explain-and-feedback"><span class="secno">2.5 </span>Explain and Feedback<a class="self-link" aria-label="§" href="#use_case_explain"></a></h3>
                     <p><strong>Requirement: </strong></p>
                     <p>Some users need additional help. We propose additional properties where the author can provide additional information or explain what just happened.</p>
-                    <p>Relevant properties: <a href="#feedback" class="respec-offending-element"><code>feedback</code></a>, <a href="#explain" class="respec-offending-element"><code>explain</code></a></p>
+                    <p>Relevant properties: <a href="#feedback-explanation" class="respec-offending-element"><code>feedback</code></a>, <a href="#explain" class="respec-offending-element"><code>explain</code></a></p>
                 </section>
 
 		</section>
@@ -1208,7 +1208,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             </tr>
             <tr>
               <th class="property-value-head" scope="row">Value:</th>
-              <td class="property-value"><a href="#valuetype_token_list" class="respec-offending-element">token list</a></td>
+              <td class="property-value">token list</td>
             </tr>
           </tbody>
         </table>
@@ -1285,7 +1285,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             </tr>
             <tr>
               <th class="property-value-head" scope="row">Value:</th>
-              <td class="property-value"><a href="#valuetype_token_list" class="respec-offending-element">token list</a></td>
+              <td class="property-value">token list</td>
             </tr>
           </tbody>
         </table>
@@ -1355,7 +1355,7 @@ URI 2 may read:
 						</tr>
 						<tr>
 							<th class="property-value-head" scope="row">Value:</th>
-							<td class="property-value"><a href="#valuetype_token" class="respec-offending-element">token</a></td>
+							<td class="property-value">token</td>
 						</tr>
 					</tbody>
 				</table>
@@ -1471,7 +1471,7 @@ URI 2 may read:
 						</tr>
 						<tr>
 							<th class="property-value-head" scope="row">Value:</th>
-							<td class="property-value"><a href="#valuetype_string" class="respec-offending-element">string text</a></td>
+							<td class="property-value">string text</td>
 						</tr>
 					</tbody>
 				</table>
@@ -1532,7 +1532,7 @@ URI 2 may read:
 						</tr>
 						<tr>
 							<th class="property-value-head" scope="row">Value:</th>
-							<td class="property-value"><a href="#valuetype_string" class="respec-offending-element">string</a></td>
+							<td class="property-value">string</td>
 						</tr>
 					</tbody>
 				</table>
@@ -1588,7 +1588,7 @@ URI 2 may read:
 									</tr>
 									<tr>
 										<th class="property-value-head" scope="row">Value:</th>
-										<td class="property-value"><a href="#valuetype_string" class="respec-offending-element">string text</a></td>
+										<td class="property-value">string text</td>
 									</tr>
 								</tbody>
 		</table>
@@ -1643,7 +1643,7 @@ URI 2 may read:
 						</tr>
 						<tr>
 							<th class="property-value-head" scope="row">Value:</th>
-							<td class="property-value"><a href="#valuetype_string" class="respec-offending-element">string text</a></td>
+							<td class="property-value">string text</td>
 						</tr>
 					</tbody>
 				</table>
@@ -1696,7 +1696,7 @@ URI 2 may read:
 						</tr>
 						<tr>
 							<th class="property-value-head" scope="row">Value:</th>
-							<td class="property-value"><a href="#valuetype_string" class="respec-offending-element">string text</a></td>
+							<td class="property-value">string text</td>
 						</tr>
 					</tbody>
 				</table>
@@ -1752,7 +1752,7 @@ URI 2 may read:
 						</tr>
 						<tr>
 							<th class="property-value-head" scope="row">Value:</th>
-							<td class="property-value"><a href="#valuetype_uri" class="respec-offending-element">URI</a></td>
+							<td class="property-value">URI</td>
 						</tr>
 					</tbody>
 				</table>
@@ -1804,7 +1804,7 @@ URI 2 may read:
 						</tr>
 						<tr>
 							<th class="property-value-head" scope="row">Value:</th>
-							<td class="property-value"><a href="#valuetype_uri" class="respec-offending-element">URI</a></td>
+							<td class="property-value">URI</td>
 						</tr>
 					</tbody>
 				</table>
