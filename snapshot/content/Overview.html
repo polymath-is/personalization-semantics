@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.3.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.4.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -121,7 +121,10 @@ input.task-list-item-checkbox {
 		
 		
 		
-		<style id="respec-mainstyle">/*****************************************************************
+		
+	
+		<link href="../common/css/common.css" rel="stylesheet" type="text/css">
+	<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -460,9 +463,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-strong {
   font-weight: bold;
 }
-</style>
-	
-	<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"><link rel="canonical" href="https://www.w3.org/TR/personalization-semantics-content-1.0/"><script id="initialUserConfig" type="application/json">{
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"><link rel="canonical" href="https://www.w3.org/TR/personalization-semantics-content-1.0/"><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "doRDFa": "1.0",
   "includePermalinks": true,
@@ -474,6 +475,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   "shortName": "personalization-semantics-content-1.0",
   "copyrightStart": "2017",
   "license": "document",
+  "previousPublishDate": "2018-03-16",
   "previousMaturity": "https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/",
   "edDraftURI": "https://w3c.github.io/personalization-semantics/content/",
   "editors": [
@@ -804,8 +806,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       ]
     }
   },
-  "publishISODate": "2018-10-15T00:00:00.000Z",
-  "generatedSubtitle": "Working Draft 15 October 2018"
+  "publishISODate": "2018-10-18T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 18 October 2018"
 }</script><meta name="description" content="This document provides use cases and a vocabulary of terms that can be used to enhance web content by providing information about form controls, symbols, and other user interface elements. User agents use the semantics to augment or adapt content to the user’s scenario. This helps users with varying needs to understand the content by providing support for simplification and a way to manage unnecessary distractions."></head>
 	<body class="h-entry"><div class="head">
   <a href="https://www.w3.org/" class="logo">
@@ -813,15 +815,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </a>
   <h1 id="title" class="title p-name">Personalization Semantics Content Module 1.0</h1>
   
-  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-10-15">15 October 2018</time></h2>
+  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-10-18">18 October 2018</time></h2>
   <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181015/">https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181015/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/">https://www.w3.org/TR/personalization-semantics-content-1.0/</a></dd>
+    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181018/">https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181018/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/">https://www.w3.org/TR/personalization-semantics-content-1.0/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/personalization-semantics/content/">https://w3c.github.io/personalization-semantics/content/</a></dd>
     
     
     
     
-    <dt>Previous version:</dt><dd><a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/">https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/</a></dd>
+    <dt>Previous version:</dt><dd><a href="https://www.w3.org/TR/2018/https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/-personalization-semantics-content-1.0-20180316/">https://www.w3.org/TR/2018/https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/-personalization-semantics-content-1.0-20180316/</a></dd>
     
     <dt>Editors:</dt>
     <dd class="p-author h-card vcard" data-editor-id="16320"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard" data-editor-id="72055"><a class="ed_mailto u-email email p-name" href="mailto:charlesl@benetech.org">Charles LaPierre</a> (Benetech)</dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd><dd class="p-author h-card vcard" data-editor-id="100586"><a class="ed_mailto u-email email p-name" href="mailto:ran@w3.org">Roy Ran</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd><dd class="p-author h-card vcard" data-editor-id="2460"><span class="p-name fn">Richard Schwerdtfeger</span> (<a class="p-org org h-org h-card" href="https://www.knowbility.org/">Knowbility</a>) (Editor until October 2017)</dd>
@@ -853,27 +855,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             
             
 			<p>This document provides use cases and a vocabulary of terms that can be used to enhance web content by providing information about form controls, symbols, and other user interface elements. User agents use the semantics to augment or adapt content to the user’s scenario. This helps users with varying needs to understand the content by providing support for simplification and a way to manage unnecessary distractions.</p>
-			<p>The Personalization Semantics Content Module 1.0 is an extension of the personalization semantics introduced in the <a href="../">Personalization Semantics Explainer 1.0</a> document [<cite><a class="bibref" href="#bib-personalization-semantics-1.0">personalization-semantics-1.0</a></cite>].</p>
+			<p>The Personalization Semantics Content Module 1.0 is an extension of the personalization semantics introduced in the <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20181018/">Personalization Semantics Explainer 1.0</a> document.</p>
 		</section>
 
 		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
-      </p><p>
-          This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as a Working Draft.
-          This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-          </p><p>
-            
-            Comments regarding this document are welcome.
-              Please send them to
-              <a href="mailto:public-personalization-tf@w3.org">public-personalization-tf@w3.org</a>
-              (<a href="https://lists.w3.org/Archives/Public/public-personalization-tf/">archives</a>).
-            
-            </p><p>
+      </p>
+      <p>This is a Working Draft of Personalization Semantics Content by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. Personalization Semantics Content Module is a part of Personalization Semantics, which is introduced in the <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-1.0-20181018/">Personalization Semantics Explainer 1.0</a>. This version updates values for properties and formats the example's code. </p>
+
+          <p>To comment, <a href="https://github.com/w3c/personalization-semantics/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> personalization semantics GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-personalization-tf@w3.org">public-personalization-tf@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-personalization-tf/">archives</a>). Comments are requested by <strong>13 April 2018</strong>. In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/personalization-semantics/content/">publicly visible editors' draft</a>. </p>
+          <p>
             Publication as a Working Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
             Membership. This is a draft document and may be updated, replaced or obsoleted by other
             documents at any time. It is inappropriate to cite this document as other than work in
             progress.
-          </p><p>
+          </p>
+          <p>
           
             This document was produced by
             a group
@@ -895,7 +892,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           
           
         </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#use-cases" class="tocxref"><span class="secno">2. </span>Use Cases</a><ol class="toc"><li class="tocline"><a href="#use_case_simplification" class="tocxref"><span class="secno">2.1 </span>Simplification</a></li><li class="tocline"><a href="#use_case_adding_context" class="tocxref"><span class="secno">2.2 </span>Adding Context</a><ol class="toc"><li class="tocline"><a href="#use_case_general_context" class="tocxref"><span class="secno">2.2.1 </span>General Context</a></li><li class="tocline"><a href="#use_case_interoperable_symbols" class="tocxref"><span class="secno">2.2.2 </span>Interoperable Symbols</a></li></ol></li></ol></li><li class="tocline"><a href="#content" class="tocxref"><span class="secno">3. </span>Content</a><ol class="toc"><li class="tocline"><a href="#action-explanation" class="tocxref"><span class="secno">3.1 </span>action</a><ol class="toc"><li class="tocline"><a href="#description" class="tocxref"><span class="secno">3.1.1 </span>Description</a></li><li class="tocline"><a href="#action-example" class="tocxref"><span class="secno">3.1.2 </span>Example</a></li><li class="tocline"><a href="#characteristics" class="tocxref"><span class="secno">3.1.3 </span>Characteristics</a></li><li class="tocline"><a href="#values" class="tocxref"><span class="secno">3.1.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#destination-explanation" class="tocxref"><span class="secno">3.2 </span>destination</a><ol class="toc"><li class="tocline"><a href="#description-0" class="tocxref"><span class="secno">3.2.1 </span>Description</a></li><li class="tocline"><a href="#destination-example" class="tocxref"><span class="secno">3.2.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-0" class="tocxref"><span class="secno">3.2.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-0" class="tocxref"><span class="secno">3.2.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#field-explanation" class="tocxref"><span class="secno">3.3 </span>field</a><ol class="toc"><li class="tocline"><a href="#description-1" class="tocxref"><span class="secno">3.3.1 </span>Description</a></li><li class="tocline"><a href="#field-example" class="tocxref"><span class="secno">3.3.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-1" class="tocxref"><span class="secno">3.3.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-1" class="tocxref"><span class="secno">3.3.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#simplification-explanation" class="tocxref"><span class="secno">3.4 </span>simplification</a><ol class="toc"><li class="tocline"><a href="#description-2" class="tocxref"><span class="secno">3.4.1 </span>Description</a></li><li class="tocline"><a href="#simplification-example" class="tocxref"><span class="secno">3.4.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-2" class="tocxref"><span class="secno">3.4.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-2" class="tocxref"><span class="secno">3.4.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#distraction-explanation" class="tocxref"><span class="secno">3.5 </span>distraction</a><ol class="toc"><li class="tocline"><a href="#description-3" class="tocxref"><span class="secno">3.5.1 </span>Description</a></li><li class="tocline"><a href="#distraction-example" class="tocxref"><span class="secno">3.5.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-3" class="tocxref"><span class="secno">3.5.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-3" class="tocxref"><span class="secno">3.5.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#symbol-explanation" class="tocxref"><span class="secno">3.6 </span>symbol</a><ol class="toc"><li class="tocline"><a href="#description-4" class="tocxref"><span class="secno">3.6.1 </span>Description</a></li><li class="tocline"><a href="#symbol-example" class="tocxref"><span class="secno">3.6.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-4" class="tocxref"><span class="secno">3.6.3 </span>Characteristics</a></li></ol></li></ol></li><li class="tocline"><a href="#vocabulary-implementations" class="tocxref"><span class="secno">A. </span>Vocabulary Implementations</a></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">B.1 </span>Participants active in the Personalization TF at the time of publication</a></li><li class="tocline"><a href="#ack_others" class="tocxref"><span class="secno">B.2 </span>Other Personalization TF contributors, commenters, and previously active participants</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">B.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">C. </span>References</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">C.1 </span>Normative references</a></li></ol></li></ol></nav>
+        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#use-cases" class="tocxref"><span class="secno">2. </span>Use Cases</a><ol class="toc"><li class="tocline"><a href="#use_case_simplification" class="tocxref"><span class="secno">2.1 </span>Simplification</a></li><li class="tocline"><a href="#use_case_adding_context" class="tocxref"><span class="secno">2.2 </span>Adding Context</a><ol class="toc"><li class="tocline"><a href="#use_case_general_context" class="tocxref"><span class="secno">2.2.1 </span>General Context</a></li><li class="tocline"><a href="#use_case_interoperable_symbols" class="tocxref"><span class="secno">2.2.2 </span>Interoperable Symbols</a></li></ol></li></ol></li><li class="tocline"><a href="#content" class="tocxref"><span class="secno">3. </span>Content</a><ol class="toc"><li class="tocline"><a href="#action-explanation" class="tocxref"><span class="secno">3.1 </span>action</a><ol class="toc"><li class="tocline"><a href="#description" class="tocxref"><span class="secno">3.1.1 </span>Description</a></li><li class="tocline"><a href="#action-example" class="tocxref"><span class="secno">3.1.2 </span>Example</a></li><li class="tocline"><a href="#characteristics" class="tocxref"><span class="secno">3.1.3 </span>Characteristics</a></li><li class="tocline"><a href="#values" class="tocxref"><span class="secno">3.1.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#destination-explanation" class="tocxref"><span class="secno">3.2 </span>destination</a><ol class="toc"><li class="tocline"><a href="#description-0" class="tocxref"><span class="secno">3.2.1 </span>Description</a></li><li class="tocline"><a href="#destination-example" class="tocxref"><span class="secno">3.2.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-0" class="tocxref"><span class="secno">3.2.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-0" class="tocxref"><span class="secno">3.2.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#field-explanation" class="tocxref"><span class="secno">3.3 </span>field</a><ol class="toc"><li class="tocline"><a href="#description-1" class="tocxref"><span class="secno">3.3.1 </span>Description</a></li><li class="tocline"><a href="#field-example" class="tocxref"><span class="secno">3.3.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-1" class="tocxref"><span class="secno">3.3.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-1" class="tocxref"><span class="secno">3.3.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#simplification-explanation" class="tocxref"><span class="secno">3.4 </span>simplification</a><ol class="toc"><li class="tocline"><a href="#description-2" class="tocxref"><span class="secno">3.4.1 </span>Description</a></li><li class="tocline"><a href="#simplification-example" class="tocxref"><span class="secno">3.4.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-2" class="tocxref"><span class="secno">3.4.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-2" class="tocxref"><span class="secno">3.4.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#distraction-explanation" class="tocxref"><span class="secno">3.5 </span>distraction</a><ol class="toc"><li class="tocline"><a href="#description-3" class="tocxref"><span class="secno">3.5.1 </span>Description</a></li><li class="tocline"><a href="#distraction-example" class="tocxref"><span class="secno">3.5.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-3" class="tocxref"><span class="secno">3.5.3 </span>Characteristics</a></li><li class="tocline"><a href="#values-3" class="tocxref"><span class="secno">3.5.4 </span>Values</a></li></ol></li><li class="tocline"><a href="#symbol-explanation" class="tocxref"><span class="secno">3.6 </span>symbol</a><ol class="toc"><li class="tocline"><a href="#description-4" class="tocxref"><span class="secno">3.6.1 </span>Description</a></li><li class="tocline"><a href="#symbol-example" class="tocxref"><span class="secno">3.6.2 </span>Example</a></li><li class="tocline"><a href="#characteristics-4" class="tocxref"><span class="secno">3.6.3 </span>Characteristics</a></li></ol></li></ol></li><li class="tocline"><a href="#vocabulary-implementations" class="tocxref"><span class="secno">A. </span>Vocabulary Implementations</a></li><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">B. </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#significant-editorial-changes-since-the-first-public-working-draft" class="tocxref"><span class="secno">B.1 </span>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">C. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">C.1 </span>Participants active in the Personalization TF at the time of publication</a></li><li class="tocline"><a href="#ack_others" class="tocxref"><span class="secno">C.2 </span>Other Personalization TF contributors, commenters, and previously active participants</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">C.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">D. </span>References</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">D.1 </span>Normative references</a></li></ol></li></ol></nav>
 
 		<section class="informative" id="introduction">
 
@@ -2065,12 +2062,24 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<!--OddPage--><h2 id="a-vocabulary-implementations"><span class="secno">A. </span>Vocabulary Implementations<a class="self-link" aria-label="§" href="#vocabulary-implementations"></a></h2>
 			<p>The vocabulary implementations included in this document are available at <a href="../#vocabulary-implementations">Personalization Explainer 1.0 Vocabulary Implementations section</a>.</p>
 		</section>
+		<section class="appendix" id="changelog">
+			<!--OddPage--><h2 id="b-change-log"><span class="secno">B. </span>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2>
+			<p>The full <a href="https://github.com/w3c/personalization-semantics/commits/master">commit history to personalization semantics content</a> is available.</p>
+			<section id="significant-editorial-changes-since-the-first-public-working-draft">
+				<h3 id="b-1-significant-editorial-changes-since-the-first-public-working-draft"><span class="secno">B.1 </span>Significant editorial changes since the <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180213/">First Public Working Draft</a><a class="self-link" aria-label="§" href="#significant-editorial-changes-since-the-first-public-working-draft"></a></h3>
+				<ul>
+					<li>2018-03-08: Removed the prefix from properties;</li>
+					<li>2018-04-05: Updated the example and added editor's note;</li>
+					<li>2018-05-01: Updated the values for properties and formatted code;</li>
+				</ul>
+			</section>
+		</section>
 
 		<section class="appendix informative section" id="acknowledgements">
-	<!--OddPage--><h2 id="b-acknowledgments"><span class="secno">B. </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
+	<!--OddPage--><h2 id="c-acknowledgments"><span class="secno">C. </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
 	<p>The following people contributed to the development of this document.</p>
 	<section class="section" id="ack_group">
-		<h3 id="b-1-participants-active-in-the-personalization-tf-at-the-time-of-publication"><span class="secno">B.1 </span>Participants active in the Personalization TF at the time of publication<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
+		<h3 id="c-1-participants-active-in-the-personalization-tf-at-the-time-of-publication"><span class="secno">C.1 </span>Participants active in the Personalization TF at the time of publication<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
 		<ul>
 			<li>Thaddeus Cambron (Invited Expert)</li>
 			<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr>/<abbr title="Massachusetts Institute of Technology">MIT</abbr>)</li>
@@ -2083,7 +2092,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</ul>
   </section>
 	<section class="section" id="ack_others">
-		<h3 id="b-2-other-personalization-tf-contributors-commenters-and-previously-active-participants"><span class="secno">B.2 </span>Other Personalization TF contributors, commenters, and previously active participants<a class="self-link" aria-label="§" href="#ack_others"></a></h3>
+		<h3 id="c-2-other-personalization-tf-contributors-commenters-and-previously-active-participants"><span class="secno">C.2 </span>Other Personalization TF contributors, commenters, and previously active participants<a class="self-link" aria-label="§" href="#ack_others"></a></h3>
 		<ul>
 			<li>Joanmarie Diggs (Igalia)</li>
 			<li>Richard Schwerdtfeger (Knowbility, Inc.)</li>
@@ -2091,7 +2100,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</ul>
 	</section>
 	<section class="section" id="ack_funders">
-		<h3 id="b-3-enabling-funders"><span class="secno">B.3 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
+		<h3 id="c-3-enabling-funders"><span class="secno">C.3 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
 		<p>This publication has been funded in part with U.S. Federal funds from the Health and Human Services, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR) under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Health and Human Services, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 	</section>
 </section>
@@ -2102,10 +2111,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	
 
 <section id="references" class="appendix">
-      <!--OddPage--><h2 id="c-references"><span class="secno">C. </span>References<a class="self-link" aria-label="§" href="#references"></a></h2>
+      <!--OddPage--><h2 id="d-references"><span class="secno">D. </span>References<a class="self-link" aria-label="§" href="#references"></a></h2>
       
     <section id="normative-references">
-        <h3 id="c-1-normative-references"><span class="secno">C.1 </span>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+        <h3 id="d-1-normative-references"><span class="secno">D.1 </span>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-dom4">[DOM4]</dt><dd><a href="https://dom.spec.whatwg.org/"><cite>DOM Standard</cite></a>. Anne van Kesteren. WHATWG. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-html52">[HTML52]</dt><dd><a href="https://www.w3.org/TR/html52/"><cite>HTML 5.2</cite></a>. Steve Faulkner; Arron Eicholz; Travis Leithead; Alex Danilo; Sangwhan Moon. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html52/">https://www.w3.org/TR/html52/</a></dd><dt id="bib-microdata">[microdata]</dt><dd><a href="https://www.w3.org/TR/microdata/"><cite>HTML Microdata</cite></a>. Charles McCathie Nevile; Dan Brickley; Ian Hickson. W3C. 26 April 2018. W3C Working Draft. URL: <a href="https://www.w3.org/TR/microdata/">https://www.w3.org/TR/microdata/</a></dd><dt id="bib-personalization-semantics-1.0">[personalization-semantics-1.0]</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-1.0/"><cite>Personalization Semantics Explainer 1.0</cite></a>. Lisa Seeman-Kestenbaum; Charles LaPierre; Richard Schwerdtfeger; Michael Cooper; Ruoxi Ran. W3C. 16 March 2018. W3C Working Draft. URL: <a href="https://www.w3.org/TR/personalization-semantics-1.0/">https://www.w3.org/TR/personalization-semantics-1.0/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="http://www.w3.org/TR/2015/WD-SVG2-20150915/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Nikos Andronikos; Rossen Atanassov; Tavmjong Bah; Amelia Bellamy-Royds; Brian Birtles; Cyril Concolato; Erik Dahlström; Chris Lilley; Cameron McCormack; Doug Schepers; Dirk Schulze; Richard Schwerdtfeger; Satoru Takagi; Jonathan Watt et al. W3C. W3C Working Draft. URL: <a href="http://www.w3.org/TR/2015/WD-SVG2-20150915/">http://www.w3.org/TR/2015/WD-SVG2-20150915/</a></dd>
       </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
