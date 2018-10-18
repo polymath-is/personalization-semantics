@@ -858,7 +858,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p>
-        <p>This is a <a href="https://www.w3.org/2018/Process-20180201/#RecsWD">Working Draft</a> of <a href="https://www.w3.org/TR/personalization-semantics-1.0/">Personalization Semantics Explainer 1.0</a> by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. This specification changes from the <a href="https://www.w3.org/TR/2017/WD-personalization-semantics-1.0-20170606/">previous version</a> to introduce personalization semantics modules. This explainer introduces standard semantics to enable user-driven personalization, such as the association of a user-preferred symbols to elements having those semantics. The modules define features for specific categories of personalization, including <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181018">Adaptable Content</a>, <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Help and Support</a> and <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Tools</a>. This version adds a Vocabulary Identification section, does some changes in sections of WAI-ARIA and HTML Microdata, also replaces the RDFa section with editor's note.
+        <p>This is a <a href="https://www.w3.org/2018/Process-20180201/#RecsWD">Working Draft</a> of <a href="https://www.w3.org/TR/personalization-semantics-1.0/">Personalization Semantics Explainer 1.0</a> by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. This specification changes from the <a href="https://www.w3.org/TR/2017/WD-personalization-semantics-1.0-20170606/">previous version</a> to introduce personalization semantics modules. This explainer introduces standard semantics to enable user-driven personalization, such as the association of a user-preferred symbols to elements having those semantics. The modules define features for specific categories of personalization, including <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181018">Adaptable Content</a>, <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Help and Support</a> and <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Tools</a>. This version keeps the Vocabulary Implementations as a issue and the Task Force is looking for advice on choosing an implementation mechanism. See our Pros/Cons discussion <a href="https://github.com/w3c/personalization-semantics/wiki/Comparison-of-ways-to-use-vocabulary-in-content">Comparison of ways to use vocabulary in content</a>, on the various alternatives we have identified.
         </p>
         <p>To comment, <a href="https://github.com/w3c/personalization-semantics/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> personalization semantics GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-personalization-tf@w3.org">public-personalization-tf@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-personalization-tf/">archives</a>). Comments are requested by <strong>13 April 2018</strong>. In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/personalization-semantics/">publicly visible editors' draft</a>. </p>
 
@@ -889,7 +889,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           
           
         </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a href="#why_accessibility" class="tocxref"><span class="secno">1.1 </span>Why We Need Personalization</a></li><li class="tocline"><a href="#intro_context" class="tocxref"><span class="secno">1.2 </span>Personalization Use Cases (general)</a></li></ol></li><li class="tocline"><a href="#terms" class="tocxref"><span class="secno">2. </span>Important Terms</a></li><li class="tocline"><a href="#characteristics_semanticproperties" class="tocxref"><span class="secno">3. </span>Structure of Properties</a><ol class="toc"><li class="tocline"><a href="#propcharacteristic_value" class="tocxref"><span class="secno">3.1 </span>Value</a></li></ol></li><li class="tocline"><a href="#modules" class="tocxref"><span class="secno">4. </span>Modules</a></li><li class="tocline"><a href="#vocabulary-implementations" class="tocxref"><span class="secno">A. </span>Vocabulary Implementations</a><ol class="toc"><li class="tocline"><a href="#mapping-values-to-different-syntax" class="tocxref"><span class="secno">A.1 </span>Mapping Values to Different Syntax </a></li><li class="tocline"><a href="#vocabulary-identification" class="tocxref"><span class="secno">A.2 </span>Vocabulary Identification</a><ol class="toc"><li class="tocline"><a href="#prefix" class="tocxref"><span class="secno">A.2.1 </span>Prefix</a></li><li class="tocline"><a href="#identification-uri" class="tocxref"><span class="secno">A.2.2 </span>Identification URI</a></li></ol></li><li class="tocline"><a href="#wai-aria" class="tocxref"><span class="secno">A.3 </span><abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a><ol class="toc"><li class="tocline"><a href="#additional-wai-aria-roles" class="tocxref"><span class="secno">A.3.1 </span>Additional <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> Roles</a></li></ol></li><li class="tocline"><a href="#html-microdata" class="tocxref"><span class="secno">A.4 </span><abbr title="Hypertext Markup Language">HTML</abbr> Microdata</a></li><li class="tocline"><a href="#rdfa" class="tocxref"><span class="secno">A.5 </span>RDFa</a></li><li class="tocline"><a href="#autocomplete" class="tocxref"><span class="secno">A.6 </span>Autocomplete</a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">B.1 </span>Participants active in the Personalization TF at the time of publication</a></li><li class="tocline"><a href="#ack_others" class="tocxref"><span class="secno">B.2 </span>Other Personalization TF contributors, commenters, and previously active participants</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">B.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">C. </span>References</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">C.1 </span>Normative references</a></li><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">C.2 </span>Informative references</a></li></ol></li></ol></nav>
+        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a href="#why_accessibility" class="tocxref"><span class="secno">1.1 </span>Why We Need Personalization</a></li><li class="tocline"><a href="#intro_context" class="tocxref"><span class="secno">1.2 </span>Personalization Use Cases (general)</a></li></ol></li><li class="tocline"><a href="#terms" class="tocxref"><span class="secno">2. </span>Important Terms</a></li><li class="tocline"><a href="#characteristics_semanticproperties" class="tocxref"><span class="secno">3. </span>Structure of Properties</a><ol class="toc"><li class="tocline"><a href="#propcharacteristic_value" class="tocxref"><span class="secno">3.1 </span>Value</a></li></ol></li><li class="tocline"><a href="#modules" class="tocxref"><span class="secno">4. </span>Modules</a></li><li class="tocline"><a href="#vocabulary-implementations" class="tocxref"><span class="secno">A. </span>Vocabulary Implementations</a><ol class="toc"><li class="tocline"><a href="#mapping-values-to-different-syntax" class="tocxref"><span class="secno">A.1 </span>Mapping Values to Different Syntax </a></li><li class="tocline"><a href="#vocabulary-identification" class="tocxref"><span class="secno">A.2 </span>Vocabulary Identification</a><ol class="toc"><li class="tocline"><a href="#prefix" class="tocxref"><span class="secno">A.2.1 </span>Prefix</a></li><li class="tocline"><a href="#identification-uri" class="tocxref"><span class="secno">A.2.2 </span>Identification URI</a></li></ol></li><li class="tocline"><a href="#wai-aria" class="tocxref"><span class="secno">A.3 </span><abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a><ol class="toc"><li class="tocline"><a href="#additional-wai-aria-roles" class="tocxref"><span class="secno">A.3.1 </span>Additional <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> Roles</a></li></ol></li><li class="tocline"><a href="#html-microdata" class="tocxref"><span class="secno">A.4 </span><abbr title="Hypertext Markup Language">HTML</abbr> Microdata</a></li><li class="tocline"><a href="#rdfa" class="tocxref"><span class="secno">A.5 </span>RDFa</a></li><li class="tocline"><a href="#autocomplete" class="tocxref"><span class="secno">A.6 </span>Autocomplete</a></li></ol></li>
+          <li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">B. </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#significant-editorial-changes-since-the-first-public-working-draft" class="tocxref"><span class="secno">B.1 </span>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li>
+          <li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">C. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">C.1 </span>Participants active in the Personalization TF at the time of publication</a></li><li class="tocline"><a href="#ack_others" class="tocxref"><span class="secno">C.2 </span>Other Personalization TF contributors, commenters, and previously active participants</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">C.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">D. </span>References</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">D.1 </span>Normative references</a></li><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">D.2 </span>Informative references</a></li></ol></li></ol></nav>
 
 		<section class="informative" id="introduction">
 
@@ -1183,15 +1185,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				<p>This specification has been divided into modules. </p>
 				<p>Each module has use cases and vocabularies: </p>
 				<ul>
-					<li><a href="content/index.html">Adaptable Content:</a>
+
+					<li><a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181018">Adaptable Content:</a>
 					<p>This section provides vocabularies that enable user agents to augment or adapt content to the user scenario and helps the user use and understand the content.</p>
 					<p>It includes use cases and vocabularies for identifying the purpose of controls, symbols  and user interface elements and supports simplification and avoiding distractions.</p></li>
 				
-					<li><a href="help/index.html">Adaptable Help and Support:</a>
+					<li><a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Help and Support:</a>
 					<p>The first working draft of this module is now available.</p>
 					<p>It addresses adding information about the content to enable help scaffolding and additional support for different user scenarios.</p></li>
 				
-					<li><a href="tools/index.html">Adaptable Tools</a>
+					<li><a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Tools:</a>
 					<p>The first working draft of this module is now available.</p>
 					<p>It addresses adding information about the content to enable user agents and extensions to provide addtional support to the user. One example is adaptable breadcrumbs.</p></li>
 				
@@ -1314,34 +1317,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			</section>
 		</section>
 
-		<!--
+		
 
-		<section class="appendix" id="changelog">
-			<h2>Change Log</h2>
+    <section class="appendix" id="changelog">
+      <!--OddPage--><h2 id="b-change-log"><span class="secno">B. </span>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2><p><em>This section is non-normative.</em></p>
+      <p>The full <a href="https://github.com/w3c/personalization-semantics/commits/master/explainer.html">commit history to personalization semantics</a> is available.</p>
+      <section id="significant-editorial-changes-since-the-first-public-working-draft">
+        <h3 id="b-1-significant-editorial-changes-since-the-first-public-working-draft"><span class="secno">B.1 </span>Significant editorial changes since the <a href="https://www.w3.org/TR/2017/WD-personalization-semantics-1.0-20170606/">First Public Working Draft</a> <a class="self-link" aria-label="§" href="#significant-editorial-changes-since-the-first-public-working-draft"></a></h3>
+        <ul>
+          <li>2017-11-29: Changed the module of this document, divide into 4 documents, including: explainer, content, help and support and tools;</li>
+          <li>2018-02-13: Added and updated Vocabulary Implementation section;</li>
+          <li>2018-03-07: Gave the description for Microdata and RDFa usage and replaced RDFa section with Editor's Notes;</li>
+          <li>2018-10-05: Added new section for Help Needed on Implementation;</li>
+        </ul>
+    </section>
 
-			<section>
-				<h2>Substantive changes since the <a href="@@">last public working draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move contents of this list into the next one below. ->
-				</ul>
-			</section>
-
-			<section>
-				<h2>Other substantive changes since the <a href="@@">First Public Working Draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move previous list into this one. ->
-				</ul>
-			</section>
-		</section>
-
-		-->
+		
 		<section class="appendix informative section" id="acknowledgements">
-	<!--OddPage--><h2 id="b-acknowledgments"><span class="secno">B. </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
+	<!--OddPage--><h2 id="c-acknowledgments"><span class="secno">C. </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
 	<p>The following people contributed to the development of this document.</p>
 	<section class="section" id="ack_group">
-		<h3 id="b-1-participants-active-in-the-personalization-tf-at-the-time-of-publication"><span class="secno">B.1 </span>Participants active in the Personalization TF at the time of publication<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
+		<h3 id="c-1-participants-active-in-the-personalization-tf-at-the-time-of-publication"><span class="secno">C.1 </span>Participants active in the Personalization TF at the time of publication<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
 		<ul>
 			<li>Thaddeus Cambron (Invited Expert)</li>
 			<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr>/<abbr title="Massachusetts Institute of Technology">MIT</abbr>)</li>
@@ -1354,7 +1350,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</ul>
   </section>
 	<section class="section" id="ack_others">
-		<h3 id="b-2-other-personalization-tf-contributors-commenters-and-previously-active-participants"><span class="secno">B.2 </span>Other Personalization TF contributors, commenters, and previously active participants<a class="self-link" aria-label="§" href="#ack_others"></a></h3>
+		<h3 id="c-2-other-personalization-tf-contributors-commenters-and-previously-active-participants"><span class="secno">C.2 </span>Other Personalization TF contributors, commenters, and previously active participants<a class="self-link" aria-label="§" href="#ack_others"></a></h3>
 		<ul>
 			<li>Joanmarie Diggs (Igalia)</li>
 			<li>Richard Schwerdtfeger (Knowbility, Inc.)</li>
@@ -1362,7 +1358,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</ul>
 	</section>
 	<section class="section" id="ack_funders">
-		<h3 id="b-3-enabling-funders"><span class="secno">B.3 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
+		<h3 id="c-3-enabling-funders"><span class="secno">C.3 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
 		<p>This publication has been funded in part with U.S. Federal funds from the Health and Human Services, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR) under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Health and Human Services, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 	</section>
 </section>
@@ -1371,14 +1367,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	
 
 <section id="references" class="appendix">
-      <!--OddPage--><h2 id="c-references"><span class="secno">C. </span>References<a class="self-link" aria-label="§" href="#references"></a></h2>
+      <!--OddPage--><h2 id="d-references"><span class="secno">D. </span>References<a class="self-link" aria-label="§" href="#references"></a></h2>
       
     <section id="normative-references">
-        <h3 id="c-1-normative-references"><span class="secno">C.1 </span>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+        <h3 id="d-1-normative-references"><span class="secno">D.1 </span>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-microdata">[microdata]</dt><dd><a href="https://www.w3.org/TR/microdata/"><cite>HTML Microdata</cite></a>. Charles McCathie Nevile; Dan Brickley; Ian Hickson. W3C. 26 April 2018. W3C Working Draft. URL: <a href="https://www.w3.org/TR/microdata/">https://www.w3.org/TR/microdata/</a></dd><dt id="bib-rfc3986">[RFC3986]</dt><dd><a href="https://tools.ietf.org/html/rfc3986"><cite>Uniform Resource Identifier (URI): Generic Syntax</cite></a>. T. Berners-Lee; R. Fielding; L. Masinter. IETF. January 2005. Internet Standard. URL: <a href="https://tools.ietf.org/html/rfc3986">https://tools.ietf.org/html/rfc3986</a></dd>
       </dl></section><section id="informative-references">
-        <h3 id="c-2-informative-references"><span class="secno">C.2 </span>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+        <h3 id="d-2-informative-references"><span class="secno">D.2 </span>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078"><cite>Accessibility Programming Guide for OS X</cite></a>.  Apple Corporation. URL: <a href="https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078">https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx"><cite>Microsoft Active Accessibility (MSAA) 2.0</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">https://msdn.microsoft.com/en-us/library/ms697707.aspx</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx</a></dd><dt id="bib-wai-aria-implementation">[WAI-ARIA-IMPLEMENTATION]</dt><dd><a href="https://www.w3.org/TR/wai-aria-implementation/"><cite>WAI-ARIA 1.0 User Agent Implementation Guide</cite></a>. Joseph Scheuhammer; Michael Cooper. W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-implementation/">https://www.w3.org/TR/wai-aria-implementation/</a></dd><dt id="bib-wai-aria-practices">[WAI-ARIA-PRACTICES]</dt><dd><a href="https://www.w3.org/TR/wai-aria-practices/"><cite>WAI-ARIA 1.0 Authoring Practices</cite></a>. Joseph Scheuhammer; Michael Cooper. W3C. 14 July 2016. W3C Working Draft. URL: <a href="https://www.w3.org/TR/wai-aria-practices/">https://www.w3.org/TR/wai-aria-practices/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd>
       </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
