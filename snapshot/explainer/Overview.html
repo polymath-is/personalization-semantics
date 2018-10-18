@@ -858,7 +858,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p>
-        <p>This is a <a href="https://www.w3.org/2018/Process-20180201/#RecsWD">Working Draft</a> of <a href="https://www.w3.org/TR/personalization-semantics-1.0/">Personalization Semantics Explainer 1.0</a> by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. This specification changes from the <a href="https://www.w3.org/TR/2017/WD-personalization-semantics-1.0-20170606/">previous version</a> to introduce personalization semantics modules. This explainer introduces standard semantics to enable user-driven personalization, such as the association of a user-preferred symbols to elements having those semantics. The modules define features for specific categories of personalization, including <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181018">Adaptable Content</a>, <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Help and Support</a> and <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Tools</a>. This version keeps the Vocabulary Implementations as a issue and the Task Force is looking for advice on choosing an implementation mechanism. See our Pros/Cons discussion <a href="https://github.com/w3c/personalization-semantics/wiki/Comparison-of-ways-to-use-vocabulary-in-content">Comparison of ways to use vocabulary in content</a>, on the various alternatives we have identified.
+        <p>This is a <a href="https://www.w3.org/2018/Process-20180201/#RecsWD">Working Draft</a> of <a href="https://www.w3.org/TR/personalization-semantics-1.0/">Personalization Semantics Explainer 1.0</a> by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. This specification changes from the <a href="https://www.w3.org/TR/2017/WD-personalization-semantics-1.0-20170606/">previous version</a> to introduce personalization semantics modules. This explainer introduces standard semantics to enable user-driven personalization, such as the association of a user-preferred symbols to elements having those semantics. The modules define features for specific categories of personalization, including <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20181018">Adaptable Content</a>, <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Help and Support</a> and <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">Adaptable Tools</a>. This version adds new section for Help Needed on Implementation and the Task Force is looking for advice on choosing an implementation mechanism. See our Pros/Cons discussion <a href="https://github.com/w3c/personalization-semantics/wiki/Comparison-of-ways-to-use-vocabulary-in-content">Comparison of ways to use vocabulary in content</a>.
         </p>
         <p>To comment, <a href="https://github.com/w3c/personalization-semantics/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> personalization semantics GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-personalization-tf@w3.org">public-personalization-tf@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-personalization-tf/">archives</a>). Comments are requested by <strong>13 April 2018</strong>. In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/personalization-semantics/">publicly visible editors' draft</a>. </p>
 
@@ -948,7 +948,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-accessibility-subtree">Accessibility Subtree</dfn></dt>
     <dd>
-      <p>An <a href="#dfn-accessible-objects" class="internalDFN" data-link-type="dfn">accessible object</a> in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a> and its descendants in that tree. It does not include objects which have relationships other than parent-child in that tree. For example, it does not include objects linked via <pref>aria-flowto</pref> unless those objects are also descendants in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a>.</p>
+      <p>An <a href="#dfn-accessible-objects" class="internalDFN" data-link-type="dfn">accessible object</a> in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a> and its descendants in that tree. It does not include objects which have relationships other than parent-child in that tree. For example, it does not include objects linked via aria-flowto unless those objects are also descendants in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a>.</p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-accessibility-tree">Accessibility Tree</dfn></dt>
     <dd>
@@ -1077,11 +1077,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-lt="owned|owned element's|owned elements|owned element" data-dfn-type="dfn" id="dfn-owned">Owned Element</dfn></dt>
     <dd>
-      <p>An 'owned element' is any <abbr title="Document Object Model">DOM</abbr> descendant of the <a href="#dfn-elements" class="internalDFN" data-link-type="dfn">element</a>, any element specified as a child via <pref>aria-owns</pref>, or any <abbr title="Document Object Model">DOM</abbr> descendant of the owned child.</p>
+      <p>An 'owned element' is any <abbr title="Document Object Model">DOM</abbr> descendant of the <a href="#dfn-elements" class="internalDFN" data-link-type="dfn">element</a>, any element specified as a child via aria-owns, or any <abbr title="Document Object Model">DOM</abbr> descendant of the owned child.</p>
     </dd>
     <dt><dfn data-lt="owning|owning element" data-dfn-type="dfn" id="dfn-owning">Owning Element</dfn></dt>
     <dd>
-      <p>An 'owning element' is any <abbr title="Document Object Model">DOM</abbr> ancestor of the <a href="#dfn-elements" class="internalDFN" data-link-type="dfn">element</a>, or any element with an <pref>aria-owns</pref> attribute which references the ID of the   element. </p>
+      <p>An 'owning element' is any <abbr title="Document Object Model">DOM</abbr> ancestor of the <a href="#dfn-elements" class="internalDFN" data-link-type="dfn">element</a>, or any element with an aria-owns attribute which references the ID of the   element. </p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-perceivable">Perceivable</dfn></dt>
     <dd>
@@ -1089,7 +1089,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-lt="properties|property" data-dfn-type="dfn" id="dfn-properties">Property</dfn></dt>
     <dd>
-      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attributes" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-objects" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref respec-offending-element" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
+      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attributes" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-objects" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, aria-multiline) are less likely to change than <a class="termref respec-offending-element" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as aria-activedescendant, aria-valuenow, and aria-valuetext are expected to change often. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
     </dd>
     <dt><dfn data-lt="relationships|relationship" data-dfn-type="dfn" id="dfn-relationships">Relationship</dfn></dt>
     <dd>
@@ -1330,6 +1330,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <li>2018-03-07: Gave the description for Microdata and RDFa usage and replaced RDFa section with Editor's Notes;</li>
           <li>2018-10-05: Added new section for Help Needed on Implementation;</li>
         </ul>
+      </section>
     </section>
 
 		
