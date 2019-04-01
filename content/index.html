@@ -8,6 +8,126 @@
 		<script src="respec-config.js" class="remove"></script>
 	
 		<link href="../common/css/common.css" rel="stylesheet" type="text/css" />
+		<SCRIPT type=text/javascript>
+			function sortTable(id, col, rev) {
+			 var tblEl = document.getElementById(id);
+			 if (tblEl.reverseSort == null) {
+			  tblEl.reverseSort = new Array();
+			  tblEl.lastColumn = 1;
+			 }
+			 if (tblEl.reverseSort[col] == null)
+			  tblEl.reverseSort[col] = rev;
+			 if (col == tblEl.lastColumn)
+			  tblEl.reverseSort[col] = !tblEl.reverseSort[col];
+			 tblEl.lastColumn = col;
+			 var oldDsply = tblEl.style.display;
+			 tblEl.style.display = "none";
+			 var tmpEl;
+			 var i, j;
+			 var minVal, minIdx;
+			 var testVal;
+			 var cmp;
+			 for (i = 0; i < tblEl.rows.length - 1; i++) {
+			  minIdx = i;
+			  minVal = getTextValue(tblEl.rows[i].cells[col]);
+			  for (j = i + 1; j < tblEl.rows.length; j++) {
+			   testVal = getTextValue(tblEl.rows[j].cells[col]);
+			   cmp = compareValues(minVal, testVal);
+			   if (tblEl.reverseSort[col])
+			    cmp = -cmp;
+			   if (cmp == 0 && col != 1)
+			    cmp = compareValues(getTextValue(tblEl.rows[minIdx].cells[1]),
+			              getTextValue(tblEl.rows[j].cells[1]));
+			   if (cmp > 0) {
+			    minIdx = j;
+			    minVal = testVal;
+			   }
+			  }
+			  if (minIdx > i) {
+			   tmpEl = tblEl.removeChild(tblEl.rows[minIdx]);
+			   tblEl.insertBefore(tmpEl, tblEl.rows[i]);
+			  }
+			 }
+			 makePretty(tblEl, col);
+
+			 tblEl.style.display = oldDsply;
+			 return false;
+			}
+			if (document.ELEMENT_NODE == null) {
+			 document.ELEMENT_NODE = 1;
+			 document.TEXT_NODE = 3;
+			}
+			function getTextValue(el) {
+			 var i;
+			 var s;
+			 s = "";
+			 for (i = 0; i < el.childNodes.length; i++)
+			  if (el.childNodes[i].nodeType == document.TEXT_NODE)
+			   s += el.childNodes[i].nodeValue;
+			  else if (el.childNodes[i].nodeType == document.ELEMENT_NODE && 
+			       el.childNodes[i].tagName == "BR")
+			   s += " ";
+			  else
+			   // Use recursion to get text within sub-elements.
+			   s += getTextValue(el.childNodes[i]);
+			 return normalizeString(s);
+			}
+			function compareValues(v1, v2) {
+			 var f1, f2;
+			 f1 = parseFloat(v1);
+			 f2 = parseFloat(v2);
+			 if (!isNaN(f1) && !isNaN(f2)) {
+			  v1 = f1;
+			  v2 = f2;
+			 }
+			 // Compare the two values.
+			 if (v1 == v2)
+			  return 0;
+			 if (v1 > v2)
+			  return 1
+			 return -1;
+			}
+			var whtSpEnds = new RegExp("^\\s*|\\s*$", "g");
+			var whtSpMult = new RegExp("\\s\\s+", "g");
+			function normalizeString(s) {
+			 s = s.replace(whtSpMult, " "); // Collapse any multiple whites space.
+			 s = s.replace(whtSpEnds, "");  // Remove leading or trailing white space.
+			 return s;
+			}
+			var rowClsNm = "alternateRow";
+			var colClsNm = "sortedColumn";
+			var rowTest = new RegExp(rowClsNm, "gi");
+			var colTest = new RegExp(colClsNm, "gi");
+			function makePretty(tblEl, col) {
+			 var i, j;
+			 var rowEl, cellEl;
+			 for (i = 0; i < tblEl.rows.length; i++) {
+			  rowEl = tblEl.rows[i];
+			  rowEl.className = rowEl.className.replace(rowTest, "");
+			  if (i % 2 != 0)
+			   rowEl.className += " " + rowClsNm;
+			  rowEl.className = normalizeString(rowEl.className);
+			  for (j = 2; j < tblEl.rows[i].cells.length; j++) {
+			   cellEl = rowEl.cells[j];
+			   cellEl.className = cellEl.className.replace(colTest, "");
+			   if (j == col)
+			    cellEl.className += " " + colClsNm;
+			   cellEl.className = normalizeString(cellEl.className);
+			  }
+			 }
+			 var el = tblEl.parentNode.tHead;
+			 rowEl = el.rows[el.rows.length - 1];
+			 for (i = 2; i < rowEl.cells.length; i++) {
+			  cellEl = rowEl.cells[i];
+			  cellEl.className = cellEl.className.replace(colTest, "");
+			  if (i == col)
+			   cellEl.className += " " + colClsNm;
+			   cellEl.className = normalizeString(cellEl.className);
+			 }
+			}
+
+			</SCRIPT>
+
 	</head>
 	<body>
 
@@ -98,86 +218,101 @@
 										
 								<thead>
 												<tr>
-													<th width="50">Attributes</th>
-													<th scope="col">Value</th>
+													<th>Attributes <a title="sort" onclick="this.blur(); return sortTable('offTblBdy', 0, true);" href="#">sort↑↓</a></th>
+													<th scope="col">Value <a title="sort" onclick="this.blur(); return sortTable('offTblBdy', 1, true);" href="#">sort↑↓</a></th>
 													<th scope="col">Description</th>
 												</tr>
 								</thead>
-								<tbody>
-												<tr>
-													<th width="50" rowspan="6">action</th>
+								<tbody id="offTblBdy">
+												<tr class=alternateRow>
+													<th>action</th>
 													<th class="value-name" scope="row">add</th>
 													<td class="value-description">Add the selected item or the item at the current location to a list.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>action</th>
 													<th class="value-name" scope="row">brightness</th>
 													<td class="value-description">Adjust the screen or application  brightness. Often used with increase or decrease but is sometimes used alone as a menu name  or item.
 						                            <em class="ednote">At risk pending implementations.</em></td>
 												</tr>
-						  						<tr>
+						  						<tr class=alternateRow>
+						  							<th>action</th>
 													<th class="value-name" scope="row">buy</th>
 													<td class="value-description">Buy the selected item or buy the item at the current location. Often involves adding the current item into a shopping cart. (Implied simplification  = "critical".)</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>action</th>
 													<th class="value-name" scope="row">cancel</th>
 													<td class="value-description">Closes the dialog and discards any changes the user may have made within that dialog. (Implied simplification  = "critical".)</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>action</th>
 													<th class="value-name" scope="row">captions</th>
 													<td class="value-description">Show the settings for captions and subtitles. </td>
 												</tr>
-						 						<tr>
+						 						<tr class=alternateRow>
+						 							<th>action</th>
 													<th class="value-name" scope="row">...</th>
 													<td class="value-description">...</td>
 												</tr>
-									            <tr>
-									             	<th width="50" rowspan="6">destination</th>
+									            <tr class=alternateRow>
+									             	<th>destination</th>
 													<th class="value-name" scope="row">about</th>
 													<td class="value-description">Information about the content owner or producer.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>destination</th>
 													<th class="value-name" scope="row">accessibilityStatement</th>
 													<td class="value-description">Information about the accessibility features in a web site or web content.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>destination</th>
 													<th class="value-name" scope="row">begin</th>
 													<td class="value-description">Changes the location to the beginning item from a list of items or redirects the functionality to the first step in a sequence.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>destination</th>
 													<th class="value-name" scope="row">chat</th>
 													<td class="value-description">Human help or a dialog help function such as a chat bot.</td>
 												</tr>
-						                        <tr>
+						                        <tr class=alternateRow>
+						                        	<th>destination</th>
 													<th class="value-name" scope="row">comment</th>
 													<td class="value-description">Submit a comment on the current item.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>destination</th>
 
 													<th class="value-name" scope="row">...</th>
 													<td class="value-description">...</td>
 												</tr>
-												<tr>
-													<th width="50" rowspan="6">field</th>
+												<tr class=alternateRow>
+													<th>field</th>
 													<th class="value-name" scope="row">additionalName</th>
 													<td class="value-description">Additional or middle name.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>field</th>
 													<th class="value-name" scope="row">additionalNameInitial</th>
 													<td class="value-description">Additional or middle name initial.d</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>field</th>
 													<th class="value-name" scope="row">addressLine1</th>
 													<td class="value-description">First line of street address.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>field</th>
 													<th class="value-name" scope="row">addressLine2</th>
 													<td class="value-description">Second line of street address.</td>
 												</tr>
-												<tr>
+												<tr class=alternateRow>
+													<th>field</th>
 													<th class="value-name" scope="row">addressLine3</th>
 													<td class="value-description">Third line of street address.</td>
 												</tr>
-									             <tr>
+									             <tr class=alternateRow>
+									             	<th>field</th>
 													<th class="value-name" scope="row">...</th>
 													<td class="value-description">...</td>
 												</tr>
