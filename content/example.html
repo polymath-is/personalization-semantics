@@ -67,7 +67,7 @@
             	</section>
             	<section>
             		<h3>Characteristics</h3>
-				        <table class="property-features">
+				        <table class="property-features" style="display: block;">
 									
 									<thead>
 										<tr>
@@ -106,34 +106,32 @@
 						<option name="option3" id="option3" value="field">field</option>
 
 					</select>
-	<script>
+					<script>
 
-        var select_value = document.getElementById("select1");
-        select_value.onchange = function(){
-            var options = select_value.getElementsByTagName("option");
+       					var select_value = document.getElementById("select1");
+        				select_value.onchange = function(){
+            			var options = select_value.getElementsByTagName("option");
 
-            for(var i = 0; i < options.length; i++){
-                if(options[i].selected){
-                var tableid = options[i].value;
-                console.log(tableid);
-                var tables = document.getElementsByTagName("table");
-                console.log(tables);
-                for(var j = 0; j < tables.length; j++){
-                    if(tableid == tables[j].id){
-                        console.log(tables[j].id);
-                        tables[j].style.display = "block";
-                        }else{
-                            tables[j].style.display = "none";
+            			for(var i = 0; i < options.length; i++){
+                		if(options[i].selected){
+                		var tableid = options[i].value;
+                		console.log(tableid);
+                			var tables = document.getElementsByTagName("table");
+                			console.log(tables);
+			                for(var j = 0; j < tables.length; j++){
+			                    if(tableid == tables[j].id){
+			                        console.log(tables[j].id);
+			                        tables[j].style.display = "block";
+			                        }else{
+			                            tables[j].style.display = "none";
 
-                            }
+			                            }
+			                        }
+			                    }
+			                }
+			            }
 
-
-                        }
-                    }
-                }
-            }
-
-</script> 
+					</script> 
 
 						<table class="value-descriptions" id="action">
 										
