@@ -94,7 +94,7 @@
 			 s = s.replace(whtSpEnds, "");  // Remove leading or trailing white space.
 			 return s;
 			}
-			var rowClsNm = "alternateRow";
+			var rowClsNm = "valueInfo";
 			var colClsNm = "sortedColumn";
 			var rowTest = new RegExp(rowClsNm, "gi");
 			var colTest = new RegExp(colClsNm, "gi");
@@ -164,22 +164,49 @@
             	<p>This section list all attributes related with token, including:</p>
             	<p><code>action</code></p>
             	<p><code>destination</code></p>
+            	<p><code>distraction</code></p>
             	<p><code>field</code></p>
-            	<p>...</p>
+            	<p><code>simplification</code></p>
+
             	<section>
             		<h3>Description</h3>
             		<p>Below is descriptions for each attribute.</p>
-            		<p><code>action</code></p>
-            		<p>The action attribute provides the context of a button. It is typically used on a button element or element with role="button".</p>
+            		<div class="destination-description">
+	            		<p><code>action</code></p>
+	            		<p>The action attribute provides the context of a button. It is typically used on a button element or element with role="button".</p>
+	            	</div>
+            		<div class="destination-description">
             		<p><code>destination</code></p>
-            		<p>The destination attribute categorizes the target of a hyperlink.</p>
-            		<p>A personalization agent or user agent may add additional familiar user interface features to help users understand the link and follow the right one easily. User agents might add a familiar customized icon to the link, or style the link in a customized way, or position the link on the page in a location that the user generally expects to find a link of the particular type.</p>
-            		<p><code>field</code></p>
-            		<p>The field attribute provides the context of a text input field such as a text box. It is typically used on an input of type text, or element with a corresponding role.</p>
-            		<p>A personalization agent may add a symbol, replace the text with a more familiar term, or give it a specific presentation. Note that there is no default value.</p>
-            		<p>The user experience may include filling in the field and adding an icon.</p>
-            		<p>The field values that would typically be on form controls should provide context for the user. For example tel would relate to the user's telephone number. Note that there is no default value and there can be more than one value for a field, such as aui-field="country postcode" which includes both the country and postal code.</p>
-            		<p>...</p>
+	            		<p>The destination attribute categorizes the target of a hyperlink.</p>
+	            		<p>A personalization agent or user agent may add additional familiar user interface features to help users understand the link and follow the right one easily. User agents might add a familiar customized icon to the link, or style the link in a customized way, or position the link on the page in a location that the user generally expects to find a link of the particular type.</p>
+	            	</div>
+            		<div class="distraction-description">
+	            		<p><code>distraction</code></p>
+	            		<p>The <code>distraction</code> attribute should be used on non-essential detracting content, so that people who have problems keeping focus can turn the content off. An example user experiences would be to hide all non-essential distracting content.</p>
+						<p><strong>Supported values</strong>: animations, auto-starting, moving, ad, message, chat, overlay, popup Auto-changing (logs) third-party, offer (includes suggestions).</p>
+						<p>Note that there is no default value.</p>
+						<p>Note that elements with the <code>distraction</code> attribute should also have a label or accessible name.</p>
+					</div>
+					<div class="field-description">
+	            		<p><code>field</code></p>
+	            		<p>The field attribute provides the context of a text input field such as a text box. It is typically used on an input of type text, or element with a corresponding role.</p>
+	            		<p>A personalization agent may add a symbol, replace the text with a more familiar term, or give it a specific presentation. Note that there is no default value.</p>
+	            		<p>The user experience may include filling in the field and adding an icon.</p>
+	            		<p>The field values that would typically be on form controls should provide context for the user. For example tel would relate to the user's telephone number. Note that there is no default value and there can be more than one value for a field, such as aui-field="country postcode" which includes both the country and postal code.</p>
+            		</div>
+            		<div class="simplification-description">
+            			<p><code>simplification</code></p>
+							<p>The <code>simplification</code> attribute differentiates between critical features and less important features for simplification.</p>
+							<p>This allows simplified interfaces with less options or interfaces that emphasize critical features. Adaptations can be based on personalization settings. </p>
+						
+
+							 <p class="ednote">This was formerly <code>importance</code>. However different people may feel that sections that would be hidden in a simplified version are still very important, such as marketing content or legal terms.)</p>
+
+							<div class="note">
+								<p>These semantics aid simplification. But what content is most useful to a user varies from user to user. For example, men may be more interested in men's clothing, and may not be interested in the more frequently use women's clothing option. For that reason we may add context for elements that will help the personalization agent select the most useful content for a given user (see the <a href="#context">context</a> attribute). This is also necessary for reminders (see below).</p>
+								<p>It is worth mentioning that a lot of this information is known for personalization of advertisements and content optimization. </p>
+							</div>
+					</div>
             	</section>
             	<section>
             		<h3>Characteristics</h3>
@@ -218,104 +245,851 @@
 										
 								<thead>
 												<tr>
-													<th>Attributes <a title="sort" onclick="this.blur(); return sortTable('offTblBdy', 0, true);" href="#">sort↑↓</a></th>
-													<th scope="col">Value <a title="sort" onclick="this.blur(); return sortTable('offTblBdy', 1, true);" href="#">sort↑↓</a></th>
+													<th>Attributes <a alt="sort for attributes" onclick="this.blur(); return sortTable('value-table', 0, true);" href="#">sort↑↓</a></th>
+													<th scope="col">Values <a alt="sort for values" onclick="this.blur(); return sortTable('value-table', 1, true);" href="#">sort↑↓</a></th>
 													<th scope="col">Description</th>
 												</tr>
 								</thead>
-								<tbody id="offTblBdy">
-												<tr class=alternateRow>
+								<tbody id="value-table">
+											
+												<tr class=valueInfo>
 													<th>action</th>
 													<th class="value-name" scope="row">add</th>
 													<td class="value-description">Add the selected item or the item at the current location to a list.</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
 													<th>action</th>
 													<th class="value-name" scope="row">brightness</th>
 													<td class="value-description">Adjust the screen or application  brightness. Often used with increase or decrease but is sometimes used alone as a menu name  or item.
 						                            <em class="ednote">At risk pending implementations.</em></td>
 												</tr>
-						  						<tr class=alternateRow>
+						  						<tr class=valueInfo>
 						  							<th>action</th>
 													<th class="value-name" scope="row">buy</th>
 													<td class="value-description">Buy the selected item or buy the item at the current location. Often involves adding the current item into a shopping cart. (Implied simplification  = "critical".)</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
 													<th>action</th>
 													<th class="value-name" scope="row">cancel</th>
 													<td class="value-description">Closes the dialog and discards any changes the user may have made within that dialog. (Implied simplification  = "critical".)</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
 													<th>action</th>
 													<th class="value-name" scope="row">captions</th>
 													<td class="value-description">Show the settings for captions and subtitles. </td>
 												</tr>
-						 						<tr class=alternateRow>
+						 						<tr class=valueInfo>
 						 							<th>action</th>
-													<th class="value-name" scope="row">...</th>
-													<td class="value-description">...</td>
+													<th class="value-name" scope="row">channel</th>
+													<td class="value-description">Adjust the channel of a multimedia component. Often used with increase or decrease but is sometimes used alone as a menu name  or item. 
+						                            <em class="ednote">At risk pending implementations.</em></td>
 												</tr>
-									            <tr class=alternateRow>
-									             	<th>destination</th>
+									             <tr class=valueInfo>
+									             	<th>action</th>
+													<th class="value-name" scope="row">checkout</th>
+													<td class="value-description">Proceed to the purchasing process. (Implied simplification  = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">close</th>
+													<td class="value-description">Close the current dialog. (Implied simplification = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">color</th>
+													<td class="value-description">Opens a color picker.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">compose</th>
+													<td class="value-description">Compose a new item such as an email. (Implied simplification = "critical".)</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>action</th>
+													<th class="value-name" scope="row">confirm</th>
+													<td class="value-description">Confirms submission of the form request to the server. For example, an "ok" button. (Implied simplification  = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">connect</th>
+													<td class="value-description">Connect to a communication channel, such as an FTP server or Voice over IP channel.  Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">copy</th>
+													<td class="value-description">Copies the selected control, item or text and places it onto the clipboard</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">cut</th>
+													<td class="value-description">Removes the selected control, item or text and places it onto the clipboard</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">date</th>
+													<td class="value-description">Opens a date control. (Implied simplification= "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">decrease</th>
+													<td class="value-description">Decreases the level of the relevant setting. (Implied simplification= "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">delete</th>
+													<td class="value-description">Delete the current item, selected control, or text.</td>
+												</tr>
+									            <tr class=valueInfo>
+									             	<th>action</th>
+													<th class="value-name" scope="row">download</th>
+													<td class="value-description">Download a file from the server.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">drag</th>
+													<td class="value-description">Enables a dragged and dropped capabilities.   Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">edit</th>
+													<td class="value-description">Edit the item or selection at the current location.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">escape</th>
+													<td class="value-description">Typically used to abort, cancel or change what is currently being displayed on the screen. A common application of the the esc key is to leave full screen mode.</td>
+												</tr>
+						            
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">expand</th>
+													<td class="value-description">Expand or collapse the current item.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">forward</th>
+													<td class="value-description">Forward the current item such as an email.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">help</th>
+													<td class="value-description">Opens a help function. (Implied simplification= "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">increase</th>
+													<td class="value-description">Increases the level of the relevant setting. (Implied simplification= "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">label</th>
+													<td class="value-description">Add a label to the selected item or the item at the current location.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">left</th>
+													<td class="value-description">Moves a selected item to the left into another column or list.</td>
+												</tr>
+						           
+						   						<tr class=valueInfo>
+						   							<th>action</th>
+													<th class="value-name" scope="row">loop</th>
+													<td class="value-description">Plays the flow, presentation or a movie over and over again, once or without stopping. Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.
+						                            <em class="ednote">At risk pending implementations.</em></td>
+												</tr>            
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">mediaPosition</th>
+													<td class="value-description">Adjust the current playback position in the current media.
+						                            <em class="ednote">At risk pending implementations.</em></td>
+												</tr>
+						 						<tr class=valueInfo>
+						 							<th>action</th>
+													<th class="value-name" scope="row">mode</th>
+													<td class="value-description">Change the mode or functionality. (Implied simplification= "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">more</th>
+													<td class="value-description">Show more information. </td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>action</th>
+													<th class="value-name" scope="row">move</th>
+													<td class="value-description">Changes the position of a selected item(s).  Often used with left, right, begin, end, increase (up) or decrease (down).</td>
+												</tr>
+									             <tr class=valueInfo>
+									             	<th>action</th>
+													<th class="value-name" scope="row">mute</th>
+													<td class="value-description">Mute or toggle the mute option. </td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">new</th>
+													<td class="value-description">Open a new item. (Implied simplification= "critical".)</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>action</th>
+													<th class="value-name" scope="row">next</th>
+													<td class="value-description">Move to the next item in the series. (Implied simplification  = "critical".)</td>
+												</tr>
+									         	<tr class=valueInfo>
+									         		<th>action</th>
+													<th class="value-name" scope="row">open</th>
+													<td class="value-description">Open an item. (Implied simplification = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">order</th>
+													<td class="value-description">Changes the position of the selected item within a list of items, while each item in the list has a layer position. Often used with increase (forward), decrease (back), first and end.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">paste</th>
+													<td class="value-description">Paste the content from the clipboard to the current position.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">pause</th>
+													<td class="value-description">Pause a multimedia, audio or video element or object. (Implied simplification= "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">play</th>
+													<td class="value-description">Play a multimedia, audio or video element or object. (Implied simplification= "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">previous</th>
+													<td class="value-description">Move to the previous item in the series. (Implied simplification  = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">print</th>
+													<td class="value-description">Print the current page, selection or the item at the current location.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">profile</th>
+													<td class="value-description">Opens the user's profile page</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">properties</th>
+													<td class="value-description">Shows the properties of an item.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">received</th>
+													<td class="value-description">Open the received folder.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">refresh</th>
+													<td class="value-description">Manually refresh the current contents of the screen.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">remove</th>
+													<td class="value-description">Removes an item from a list.</td>
+												</tr>
+						            
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">reply</th>
+													<td class="value-description">Reply to the current item such as an email. (Implied simplification = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">reset</th>
+													<td class="value-description">Resets all the controls to their initial values.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">resize</th>
+													<td class="value-description">Increase or decrease the font size.  Often used with increase or decrease.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">right</th>
+													<td class="value-description">Moves a selected item to the right into another column or list.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">save</th>
+													<td class="value-description">Save the current content. (Implied simplification = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">scroll</th>
+													<td class="value-description">Advances the view. Often used with left, right, begin, end, increase (up) or decrease (down).</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">send</th>
+													<td class="value-description">Send a form, email or request. (Implied simplification = "critical".)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">sent</th>
+													<td class="value-description">Open the sent folder.</td>
+												</tr>
+						  						<tr class=valueInfo>
+						  							<th>action</th>
+													<th class="value-name" scope="row">settings</th>
+													<td class="value-description">Open settings and options.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">skip</th>
+													<td class="value-description">Skips the current step. This is typically used in a sequence of steps.</td>
+												</tr>
+						          
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">submit</th>
+													<td class="value-description">Submits the form data or a request to the server. (Implied simplification  = "critical".)</td>
+												</tr>
+						 						<tr class=valueInfo>
+						 							<th>action</th>
+													<th class="value-name" scope="row">temperature</th>
+													<td class="value-description">Adjust the temperature. Often used with increase or decrease but is sometimes used alone as a menu name  or item. 
+						                            <em class="ednote">At risk pending implementations.</em></td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">toc</th>
+													<td class="value-description">Opens a table of contents.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">undo</th>
+													<td class="value-description">Revert back to the prior state before the user's most recent changes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">upload</th>
+													<td class="value-description">Upload a file to the server.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>action</th>
+													<th class="value-name" scope="row">voiceCommands</th>
+													<td class="value-description">Activate or deactivate voice commands. Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.</td>
+												</tr>
+						  						<tr class=valueInfo>
+						  							<th>action</th>
+													<th class="value-name" scope="row">volume</th>
+													<td class="value-description">Adjust the volume of a multimedia component. Often used with increase or decrease  but is sometimes used alone as a menu name  or item.
+						                            <em class="ednote">At risk pending implementations.</em></td>
+												</tr>
+
+												<tr class=valueInfo>
+													<th>destination</th>
 													<th class="value-name" scope="row">about</th>
 													<td class="value-description">Information about the content owner or producer.</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
 													<th>destination</th>
 													<th class="value-name" scope="row">accessibilityStatement</th>
 													<td class="value-description">Information about the accessibility features in a web site or web content.</td>
 												</tr>
-												<tr class=alternateRow>
-													<th>destination</th>
+						   						<tr class=valueInfo>
+						   							<th>destination</th>
 													<th class="value-name" scope="row">begin</th>
 													<td class="value-description">Changes the location to the beginning item from a list of items or redirects the functionality to the first step in a sequence.</td>
 												</tr>
-												<tr class=alternateRow>
-													<th>destination</th>
+						                        <tr class=valueInfo>
+						                        	<th>destination</th>
 													<th class="value-name" scope="row">chat</th>
 													<td class="value-description">Human help or a dialog help function such as a chat bot.</td>
 												</tr>
-						                        <tr class=alternateRow>
-						                        	<th>destination</th>
+												<tr class=valueInfo>
+													<th>destination</th>
 													<th class="value-name" scope="row">comment</th>
 													<td class="value-description">Submit a comment on the current item.</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
 													<th>destination</th>
-
-													<th class="value-name" scope="row">...</th>
-													<td class="value-description">...</td>
+													<th class="value-name" scope="row">contact</th>
+													<td class="value-description">Opens contact information for content owner or producer.</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">email</th>
+													<td class="value-description">Email address for the content owner or producer.</td>
+												</tr>
+						  						<tr class=valueInfo>
+						  							<th>destination</th>
+													<th class="value-name" scope="row">end</th>
+													<td class="value-description">Changes the location to the end item from a list of items or redirects the functionality to the last step in a sequence.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">help</th>
+													<td class="value-description">A help function that includes support or instructions.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">home</th>
+													<td class="value-description">Initial or main page of a website or application.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">language</th>
+													<td class="value-description">Available language options for the website or web content.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">left</th>
+													<td class="value-description">Changes the location of the selected item(s) to the left.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">phone</th>
+													<td class="value-description">Phone number for the content owner or producer.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">post</th>
+													<td class="value-description">Post current item. Item will be visible to other parties.</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>destination</th>
+													<th class="value-name" scope="row">products</th>
+													<td class="value-description">Products available from the content provider.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">related</th>
+													<td class="value-description">Adds a related item(s) to a pre-selected list of items.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">right</th>
+													<td class="value-description">Changes the location of the selected item(s) to the right.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">services</th>
+													<td class="value-description">Services available from the content provider.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">signin</th>
+													<td class="value-description">Sign in to the current web site or application.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">signout</th>
+													<td class="value-description">Sign out of the current web site or application.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">sitemap</th>
+													<td class="value-description">Content containing a list of all the pages in a web site.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">social</th>
+													<td class="value-description">Content provider on a social media platform. Note, that the specific name of the social media platform should be included in the accessible name.
+						                            <em class="ednote">At risk pending implementations.</em></td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">terms</th>
+													<td class="value-description">The terms and conditions of use applicable to the website or web content.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>destination</th>
+													<th class="value-name" scope="row">tools</th>
+													<td class="value-description">Available tools for the current content.</td>
+												</tr>
+
+
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">ad</th>
+													<td class="value-description">An advertisement or offer for a product, feature or service that is under the authors' control and is not part of an activity where it is essential.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">animations</th>
+													<td class="value-description">Computer-generated moving images. Animations are also automatically updating.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">autoStarting</th>
+													<td class="value-description">Information that starts automatically without user interaction that is presented in parallel with other content.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">autoUpdating</th>
+													<td class="value-description">Information that starts automatically and is presented in parallel with other content that updates frequently without user interaction unless the auto-updating is part of an activity where it is essential.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">chat</th>
+													<td class="value-description">An interface that allows real-time interaction of text-based messages between a sender and a receiver.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">message</th>
+													<td class="value-description">Communication sent to or left for the user.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">moving</th>
+													<td class="value-description">Elements that change locations on the screen without user interaction.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">overlay</th>
+													<td class="value-description">A part of an application or content that is displayed over the top of the main content in the same window.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">popup</th>
+													<td class="value-description">A child window that blocks user interaction to the parent window.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>distraction</th>
+													<th class="value-name" scope="row">thirdParty</th>
+													<td class="value-description">Content that is not under the author’s control.</td>
+												</tr>
+
+
+												<tr class=valueInfo>
 													<th>field</th>
 													<th class="value-name" scope="row">additionalName</th>
 													<td class="value-description">Additional or middle name.</td>
 												</tr>
-												<tr class=alternateRow>
-													<th>field</th>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
 													<th class="value-name" scope="row">additionalNameInitial</th>
-													<td class="value-description">Additional or middle name initial.d</td>
+													<td class="value-description">Additional or middle name initial.</td>
 												</tr>
-												<tr class=alternateRow>
-													<th>field</th>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
 													<th class="value-name" scope="row">addressLine1</th>
 													<td class="value-description">First line of street address.</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
 													<th>field</th>
 													<th class="value-name" scope="row">addressLine2</th>
 													<td class="value-description">Second line of street address.</td>
 												</tr>
-												<tr class=alternateRow>
+												<tr class=valueInfo>
 													<th>field</th>
 													<th class="value-name" scope="row">addressLine3</th>
 													<td class="value-description">Third line of street address.</td>
 												</tr>
-									             <tr class=alternateRow>
-									             	<th>field</th>
-													<th class="value-name" scope="row">...</th>
-													<td class="value-description">...</td>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">answer</th>
+													<td class="value-description">Answer to a section question.</td>
 												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">area</th>
+													<td class="value-description">Administrative area, state, province, or region.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">bday</th>
+													<td class="value-description">Birthday.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">bdayDay</th>
+													<td class="value-description">Day of birthday.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">bdayMonth</th>
+													<td class="value-description">Month of birthday.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">bdayYear</th>
+													<td class="value-description">Year of birthday.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">ccCsc</th>
+													<td class="value-description">Credit card security codey.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">ccExp</th>
+													<td class="value-description">Date of expiration of credit card.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">ccExpMonth</th>
+													<td class="value-description">Month of expiration of credit card.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">ccExpYear</th>
+													<td class="value-description">Year of expiration of credit card.</td>
+												</tr>
+										        <tr class=valueInfo>
+										        	<th>field</th>
+													<th class="value-name" scope="row">ccName</th>
+													<td class="value-description">Full name, as it appears on credit card.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">ccNumber</th>
+													<td class="value-description">Credit card number.</td>
+												</tr>
+												<tr class=valueInfo>
+												 	<th>field</th>
+													<th class="value-name" scope="row">ccType</th>
+													<td class="value-description">Type of payment instrument (e.g. Visa). Note that there may be a change to allow for adding options.</td>
+						                        </tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">city</th>
+													<td class="value-description">Locality or city.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">comment</th>
+													<td class="value-description">Form comment section. Typically, a free text field.</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">country</th>
+													<td class="value-description">Country name.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">dateEnd</th>
+													<td class="value-description">Set the end time of an event  
+						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
+						                            <em class="ednote">At risk pending implementations.</em>
+						                            </td>
+						                        </tr>
+						                        
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">dateStart</th>
+													<td class="value-description">Set the start date or the date of an event.
+						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
+						                            <em class="ednote">At risk pending implementations.</em>
+						                            </td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">email</th>
+													<td class="value-description">Email address.</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">familyName</th>
+													<td class="value-description">Family name, surname, or last name.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">fax</th>
+													<td class="value-description">Full fax number, including international country code.</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+						                            <th class="value-name" scope="row">faxAreaCode</th>
+						                            <td class="value-description">Area code.</td>
+						                        </tr>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">faxCountryCode</th>
+													<td class="value-description">International country code.</td>
+												</tr>
+						                        <tr>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">faxLocal</th>
+													<td class="value-description">Local fax number: full number minus country and area codes.</td>
+												</tr>
+
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">faxNational</th>
+													<td class="value-description">National fax number: full number minus international country code and area code.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">gender</th>
+													<td class="value-description">Gender identity.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">givenName</th>
+													<td class="value-description">Given or first name.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">honorificPrefix</th>
+													<td class="value-description">Prefix or title (Mr., Mrs., Dr., etc.) </td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">honorificSuffix</th>
+													<td class="value-description">Suffix (Jr., II, etc.)</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                       		<th>field</th>
+													<th class="value-name" scope="row">language</th>
+													<td class="value-description">Preferred language.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">name</th>
+													<td class="value-description">Full name.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">nickname</th>
+													<td class="value-description">Nickname.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">org</th>
+													<td class="value-description">Company or organization.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">photo</th>
+													<td class="value-description">Photo or avatar.</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">position</th>
+													<td class="value-description">User's position or title within a company or organization.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">postalcode</th>
+													<td class="value-description">Postal or ZIP code.</td>
+												</tr>
+						 						<tr class=valueInfo>
+						 							<th>field</th>
+													<th class="value-name" scope="row">section-*****</th>
+													<td class="value-description">Used to group forms together.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">sex</th>
+													<td class="value-description">Sex or gender.</td>
+												</tr>
+						                        <tr class=valueInfo>
+						                       		<th>field</th>
+						                            <th class="value-name" scope="row">streetAddress</th>
+						                            <td class="value-description">Full street address condensed into one line.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">subject</th>
+													<td class="value-description">Form subject. Typically, a free text field.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">tel</th>
+													<td class="value-description">Full telephone number, including international country code.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">telAreaCode</th>
+													<td class="value-description">Area code.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">telCountryCode</th>
+													<td class="value-description">International country code.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">telExtension</th>
+													<td class="value-description">Telephone extension number.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">telLocal</th>
+													<td class="value-description">Local telephone number: full number minus international country code and area codes.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">telNational</th>
+													<td class="value-description">National telephone number: full number minus international country code.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">timeEnd</th>
+													<td class="value-description">Set the end time of an event.
+						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
+						                            <em class="ednote">At risk pending implementations.</em>
+						                            </td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">timeStart</th>
+													<td class="value-description"> Set the start time or the time of an event. 
+						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
+						                            <em class="ednote">At risk pending implementations.</em>
+						                            </td>
+												</tr>
+						                        <tr class=valueInfo>
+						                        	<th>field</th>
+													<th class="value-name" scope="row">topic</th>
+													<td class="value-description">Topic for the form. Typically, selected from a list of reserved words.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">transactionCurrency</th>
+													<td class="value-description">The monetary system being used for the transaction. Note that there may be a change to allow for adding options.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">transactionAmount</th>
+													<td class="value-description">The amount that the user is committing to pay for a transaction. (Often used when entering a bid or sale price.)</td>
+												</tr>
+												<tr class=valueInfo>
+													<th>field</th>
+													<th class="value-name" scope="row">url</th>
+													<td class="value-description">Website URL.</td>
+												</tr>
+
+												<tr class=valueInfo>
+													<th>simplification</th>
+					                                <th class="value-name" scope="row"><code>critical</code></th>
+					                                <td class="value-description">The <code>critical</code> setting should be used on: <ul>
+					                                    <li> Elements that are essential for the key function (from the user perspective) of the page. Example: The send button for an email draft in an email application.</li>
+					                                    <li> Elements that are sometimes critical to use the site, such as &quot;save my work&quot; or &quot;emergency instructions&quot;.</li>
+					                                    <li> Elements that are used by over 90% of a user group (such as parents or teachers) most times they interact with the content.<br />
+					                                    </li>
+					                                </ul>
+					                                </td>
+												</tr>
+												<tr class=valueInfo>
+														<th>simplification</th>
+														<th class="value-name" scope="row"><strong class="default"><code>medium</code> (default)</strong></th>
+														<td class="value-description">
+					                                        The <code>medium</code> setting should be used on: 
+					                                    <ul>
+															<li>Elements that are used frequently but are not essential for the key functioning of the application. Example: The delete button for an email draft in an email application.</li>
+															<li>Elements that are sometimes important for a user to interact with the site, such as settings to change colors or fonts. </li>
+															<li>Elements that are used by over 60% of a user group (such as parents or teachers) when they interact with the content.</li>
+														</ul></td>
+													</tr>
+
+												<tr class=valueInfo>
+														<th>simplification</th>
+														<th class="value-name" scope="row"><code>low</code></th>
+														<td class="value-description">
+					                                        The <code>low</code> setting should be used on elements that are rarely used or only used by advanced users. Example: The terms and services or the archive button for an email application. 
+												     </td>
+													</tr>
+
+
 												
 									</tbody>
 						</table>
@@ -324,7 +1098,7 @@
             	<section>
             		<h3>Examples</h3>
             		<p>Here is an example using the <code>action</code> attribute.</p>
-				   	    <div class="property-example" >               	
+				   	    <div class="action-example" >               	
 				                	
 				    				<pre class="example" title="Action Using AUI">
 				       				<p>&lt;button aui-action=&quot;undo&quot;&gt;Revert&lt;/button&gt;</p></pre>
@@ -332,15 +1106,26 @@
 				        			<p></p>		
 
 				    	</div>
-				    	<div>
+				    	<div class="destination-example">
 				    		<pre class="example" title="Destination Using AUI">
         &lt;a href=&quot;home.html&quot; aui-destination=&quot;home&quot;&gt;our main page&lt;/a&gt;</pre>
 		<p>See the <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">destination sample user experience</a>.</p>
 				    	</div>
-				    	<div>
-				    		<pre class="example" title="Field Using AUI">
+				    	<div class="distraction-example">
+				    		<p>Here is an example using the <code>distraction</code> attribute in the context of an animated image.</p>       
+   		<pre class="example" title="Distraction Using AUI">
+		  &lt;img src="animated.gif" alt="animated banner advertising for Foobars" aui-distraction="moving ad"&gt;</pre>
+				    		
+				    	</div>
+				    	<div class="field-example">
+				    		<pre title="Field Using AUI">
          <p>&lt;input type="text" name="telnum" aui-field=&quot;tel&quot;/&gt;</p>
 		</pre>
+				    	</div>
+				    	<div class="simplification-example">
+				    		<p>Here is an example using the <code>simplification</code> attribute in the context of a submit button.</p>
+    	<pre class="example" title="Simplification Using AUI">
+    	&lt;input aui-simplification="critical" value="Submit" type="submit"/&gt;</pre>
 				    	</div>
 
             	</section>
@@ -350,16 +1135,17 @@
             	<h2>Attributes Related with URI</h2>
             	<p>This section list all attributes related with URIs. Including:</p>
             	<p><code>symbol</code></p>
-            	<p>...</p>
+            	
             	<section>
             		<h3>Description</h3>
+            		<div class="symbol-description">
             		<p><code>symbol</code></p>
             		<p><p>The <code>symbol</code> attribute identifies the concept for symbols.</p>
 					<p>The <code>symbol</code> attribute accepts the values of a URI or shortened URI. Note that namespaces are the only additional parsing that maybe required to identify the concept.</p>
 					<p>A personalization agent can then load alternative symbols that the user is familiar with so they do not have to learn new symbols for different applications. </p>
 					<p class="note">To help this be interoperable without an RDF parser we recommend referencing the most commonly used ontologies and the highest-level concept. (For example, reference "girl" and not "young girl".) </p>
 					<p class="ednote">We should have a note of common suggested terms and references. (Maybe with links to http://www.arasaac.org/) </p></p>
-            		<p>...</p>
+            		</div>
             	</section>
             	<section>
             		<h3>Characteristics</h3>
@@ -394,27 +1180,14 @@
             	</section>
             	<section>
             		<h3>Examples</h3>
+            		<div class="symbol-example">
             		<p>Here is an example using the <code>symbol</code> attribute.</p>
     	<pre class="example" title="Symbol Using AUI">
     	   &lt;img aui-symbol="http://blisssymbolics.org/refnumber/001" href="mysymb.bmp" &gt;</pre>
+    	   			</div>
+            	</section>
+            </section>
 
-            	</section>
-            </section>
-            <section>
-            	<h2>Attributes Related with Text</h2>
-            	<p>This section list all attributes related with text.</p>
-            	<p>...</p>
-            	<section>
-            		<h3>Description</h3>
-            	</section>
-            	<section>
-            		<h3>Characteristics</h3>
-            	</section>
-            	<section>
-            		<h3>Examples</h3>
-            	</section>
-            </section>
-            	
 		</section>
 
 		<section class="appendix">
