@@ -146,7 +146,7 @@
      
             <p>This document provides personalization semantics and vocabularies that can be used to annotate web content enabling user agents to augment or adapt content to various user scenarios based on the user’s personalization settings or preferences.</p>
 			
-			<p class="ednote" id="examples-disclaimer">Personalization semantics defines a set of properties and values to annotate content. The specific mechanism to apply these properties to content has not been decided. <a href="https://github.com/w3c/personalization-semantics/wiki/Comparison-of-ways-to-use-vocabulary-in-content">Several approaches are under consideration</a> and future drafts will show progress. To help with understanding of the properties, this document provides many examples of personalization semantics applied to content, which show attributes beginning with the prefix "aui-". <em>This has not been decided as the chosen approach</em>, but the simplicity supports understanding of the examples.</p>
+			<p class="ednote" id="examples-disclaimer">Personalization semantics defines a set of properties and values to annotate content. The specific mechanism to apply these properties to content has not been decided. <a href="https://github.com/w3c/personalization-semantics/wiki/Comparison-of-ways-to-use-vocabulary-in-content">Several approaches are under consideration</a> and future drafts will show progress. To help with understanding of the properties, this document provides many examples of personalization semantics applied to content, which show attributes beginning with the prefix "data-". <em>This has not been decided as the chosen approach</em>, but the simplicity supports understanding of the examples.</p>
 
 		</section>
 		<section>
@@ -165,7 +165,7 @@
             	<p><code>action</code></p>
             	<p><code>destination</code></p>
             	<p><code>distraction</code></p>
-            	<p><code>field</code></p>
+            	<p><code>purpose</code></p>
             	<p><code>simplification</code></p>
 
             	<section>
@@ -187,12 +187,12 @@
 						<p>Note that there is no default value.</p>
 						<p>Note that elements with the <code>distraction</code> attribute should also have a label or accessible name.</p>
 					</div>
-					<div class="field-description">
-	            		<p><code>field</code></p>
-	            		<p>The field attribute provides the context of a text input field such as a text box. It is typically used on an input of type text, or element with a corresponding role.</p>
+					<div class="purpose-description">
+	            		<p><code>purpose</code></p>
+	            		<p>The purpose attribute provides the context of a text input purpose such as a text box. It is typically used on an input of type text, or element with a corresponding role.</p>
 	            		<p>A personalization agent may add a symbol, replace the text with a more familiar term, or give it a specific presentation. Note that there is no default value.</p>
-	            		<p>The user experience may include filling in the field and adding an icon.</p>
-	            		<p>The field values that would typically be on form controls should provide context for the user. For example tel would relate to the user's telephone number. Note that there is no default value and there can be more than one value for a field, such as aui-field="country postcode" which includes both the country and postal code.</p>
+	            		<p>The user experience may include filling in the purpose and adding an icon.</p>
+	            		<p>The purpose values that would typically be on form controls should provide context for the user. For example tel would relate to the user's telephone number. Note that there is no default value and there can be more than one value for a purpose, such as data-purpose="country postcode" which includes both the country and postal code.</p>
             		</div>
             		<div class="simplification-description">
             			<p><code>simplification</code></p>
@@ -759,112 +759,112 @@
 
 
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">additionalName</th>
 													<td class="value-description">Additional or middle name.</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">additionalNameInitial</th>
 													<td class="value-description">Additional or middle name initial.</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">addressLine1</th>
 													<td class="value-description">First line of street address.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">addressLine2</th>
 													<td class="value-description">Second line of street address.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">addressLine3</th>
 													<td class="value-description">Third line of street address.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">answer</th>
 													<td class="value-description">Answer to a section question.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">area</th>
 													<td class="value-description">Administrative area, state, province, or region.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bday</th>
 													<td class="value-description">Birthday.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bdayDay</th>
 													<td class="value-description">Day of birthday.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bdayMonth</th>
 													<td class="value-description">Month of birthday.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bdayYear</th>
 													<td class="value-description">Year of birthday.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccCsc</th>
 													<td class="value-description">Credit card security codey.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccExp</th>
 													<td class="value-description">Date of expiration of credit card.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccExpMonth</th>
 													<td class="value-description">Month of expiration of credit card.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccExpYear</th>
 													<td class="value-description">Year of expiration of credit card.</td>
 												</tr>
 										        <tr class=valueInfo>
-										        	<th class="attribute-name">field</th>
+										        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccName</th>
 													<td class="value-description">Full name, as it appears on credit card.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccNumber</th>
 													<td class="value-description">Credit card number.</td>
 												</tr>
 												<tr class=valueInfo>
-												 	<th class="attribute-name">field</th>
+												 	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccType</th>
 													<td class="value-description">Type of payment instrument (e.g. Visa). Note that there may be a change to allow for adding options.</td>
 						                        </tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">city</th>
 													<td class="value-description">Locality or city.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">comment</th>
 													<td class="value-description">Form comment section. Typically, a free text field.</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">country</th>
 													<td class="value-description">Country name.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">dateEnd</th>
 													<td class="value-description">Set the end time of an event  
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
@@ -873,7 +873,7 @@
 						                        </tr>
 						                        
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">dateStart</th>
 													<td class="value-description">Set the start date or the date of an event.
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
@@ -881,148 +881,148 @@
 						                            </td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">email</th>
 													<td class="value-description">Email address.</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">familyName</th>
 													<td class="value-description">Family name, surname, or last name.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">fax</th>
 													<td class="value-description">Full fax number, including international country code.</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 						                            <th class="value-name" scope="row">faxAreaCode</th>
 						                            <td class="value-description">Area code.</td>
 						                        </tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">faxCountryCode</th>
 													<td class="value-description">International country code.</td>
 												</tr>
 						                        <tr>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">faxLocal</th>
 													<td class="value-description">Local fax number: full number minus country and area codes.</td>
 												</tr>
 
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">faxNational</th>
 													<td class="value-description">National fax number: full number minus international country code and area code.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">gender</th>
 													<td class="value-description">Gender identity.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">givenName</th>
 													<td class="value-description">Given or first name.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">honorificPrefix</th>
 													<td class="value-description">Prefix or title (Mr., Mrs., Dr., etc.) </td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">honorificSuffix</th>
 													<td class="value-description">Suffix (Jr., II, etc.)</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                       		<th class="attribute-name">field</th>
+						                       		<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">language</th>
 													<td class="value-description">Preferred language.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">name</th>
 													<td class="value-description">Full name.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">nickname</th>
 													<td class="value-description">Nickname.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">org</th>
 													<td class="value-description">Company or organization.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">photo</th>
 													<td class="value-description">Photo or avatar.</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">position</th>
 													<td class="value-description">User's position or title within a company or organization.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">postalcode</th>
 													<td class="value-description">Postal or ZIP code.</td>
 												</tr>
 						 						<tr class=valueInfo>
-						 							<th class="attribute-name">field</th>
+						 							<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">section-*****</th>
 													<td class="value-description">Used to group forms together.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">sex</th>
 													<td class="value-description">Sex or gender.</td>
 												</tr>
 						                        <tr class=valueInfo>
-						                       		<th class="attribute-name">field</th>
+						                       		<th class="attribute-name">purpose</th>
 						                            <th class="value-name" scope="row">streetAddress</th>
 						                            <td class="value-description">Full street address condensed into one line.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">subject</th>
 													<td class="value-description">Form subject. Typically, a free text field.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">tel</th>
 													<td class="value-description">Full telephone number, including international country code.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telAreaCode</th>
 													<td class="value-description">Area code.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telCountryCode</th>
 													<td class="value-description">International country code.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telExtension</th>
 													<td class="value-description">Telephone extension number.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telLocal</th>
 													<td class="value-description">Local telephone number: full number minus international country code and area codes.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telNational</th>
 													<td class="value-description">National telephone number: full number minus international country code.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">timeEnd</th>
 													<td class="value-description">Set the end time of an event.
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
@@ -1030,7 +1030,7 @@
 						                            </td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">timeStart</th>
 													<td class="value-description"> Set the start time or the time of an event. 
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
@@ -1038,22 +1038,22 @@
 						                            </td>
 												</tr>
 						                        <tr class=valueInfo>
-						                        	<th class="attribute-name">field</th>
+						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">topic</th>
 													<td class="value-description">Topic for the form. Typically, selected from a list of reserved words.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">transactionCurrency</th>
 													<td class="value-description">The monetary system being used for the transaction. Note that there may be a change to allow for adding options.</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">transactionAmount</th>
 													<td class="value-description">The amount that the user is committing to pay for a transaction. (Often used when entering a bid or sale price.)</td>
 												</tr>
 												<tr class=valueInfo>
-													<th class="attribute-name">field</th>
+													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">url</th>
 													<td class="value-description">Website URL.</td>
 												</tr>
@@ -1100,32 +1100,32 @@
             		<p>Here is an example using the <code>action</code> attribute.</p>
 				   	    <div class="action-example" >               	
 				                	
-				    				<pre class="example" title="Action Using AUI">
-				       				<p>&lt;button aui-action=&quot;undo&quot;&gt;Revert&lt;/button&gt;</p></pre>
+				    				<pre class="example" title="Action Using data-">
+				       				<p>&lt;button data-action=&quot;undo&quot;&gt;Revert&lt;/button&gt;</p></pre>
 				        			<p>A personalization agent may add a symbol, replace the text with a more familiar term, or give it a specific presentation. Note that there is no default value.</p>	
 				        			<p></p>		
 
 				    	</div>
 				    	<div class="destination-example">
-				    		<pre class="example" title="Destination Using AUI">
-        &lt;a href=&quot;home.html&quot; aui-destination=&quot;home&quot;&gt;our main page&lt;/a&gt;</pre>
+				    		<pre class="example" title="Destination Using data-">
+        &lt;a href=&quot;home.html&quot; data-destination=&quot;home&quot;&gt;our main page&lt;/a&gt;</pre>
 		<p>See the <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">destination sample user experience</a>.</p>
 				    	</div>
 				    	<div class="distraction-example">
 				    		<p>Here is an example using the <code>distraction</code> attribute in the context of an animated image.</p>       
-   		<pre class="example" title="Distraction Using AUI">
-		  &lt;img src="animated.gif" alt="animated banner advertising for Foobars" aui-distraction="moving ad"&gt;</pre>
+   		<pre class="example" title="Distraction Using data-">
+		  &lt;img src="animated.gif" alt="animated banner advertising for Foobars" data-distraction="moving ad"&gt;</pre>
 				    		
 				    	</div>
-				    	<div class="field-example">
-				    		<pre title="Field Using AUI">
-         <p>&lt;input type="text" name="telnum" aui-field=&quot;tel&quot;/&gt;</p>
+				    	<div class="purpose-example">
+				    		<pre title="purpose Using data-">
+         <p>&lt;input type="text" name="telnum" data-purpose=&quot;tel&quot;/&gt;</p>
 		</pre>
 				    	</div>
 				    	<div class="simplification-example">
 				    		<p>Here is an example using the <code>simplification</code> attribute in the context of a submit button.</p>
-    	<pre class="example" title="Simplification Using AUI">
-    	&lt;input aui-simplification="critical" value="Submit" type="submit"/&gt;</pre>
+    	<pre class="example" title="Simplification Using data-">
+    	&lt;input data-simplification="critical" value="Submit" type="submit"/&gt;</pre>
 				    	</div>
 
             	</section>
@@ -1182,8 +1182,8 @@
             		<h3>Examples</h3>
             		<div class="symbol-example">
             		<p>Here is an example using the <code>symbol</code> attribute.</p>
-    	<pre class="example" title="Symbol Using AUI">
-    	   &lt;img aui-symbol="http://blisssymbolics.org/refnumber/001" href="mysymb.bmp" &gt;</pre>
+    	<pre class="example" title="Symbol Using data-">
+    	   &lt;img data-symbol="http://blisssymbolics.org/refnumber/001" href="mysymb.bmp" &gt;</pre>
     	   			</div>
             	</section>
             </section>
