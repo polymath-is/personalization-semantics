@@ -248,6 +248,8 @@
 													<th>Attributes <button aria-label="sort for attributes" aria-sort=¨none¨ onclick="return sortTable('value-table', 0, true);">sort↑↓</button></th>
 													<th scope="col">Values <button aria-label="sort for values" aria-sort=¨none¨ onclick="return sortTable('value-table', 1, true);">sort↑↓</button></th>
 													<th scope="col">Description</th>
+													<th scope="col">yes/no <button aria-label="sort for values" aria-sort=¨none¨ onclick="return sortTable('value-table', 1, true);">sort↑↓</button></th>
+
 												</tr>
 								</thead>
 								<tbody id="value-table">
@@ -256,139 +258,173 @@
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">add</th>
 													<td class="value-description">Add the selected item or the item at the current location to a list.</td>
+													<td>
+														<select>
+															<option>yes</option>
+															<option>no</option>
+														</select>
+													</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">brightness</th>
 													<td class="value-description">Adjust the screen or application  brightness. Often used with increase or decrease but is sometimes used alone as a menu name  or item.
 						                            <em class="ednote">At risk pending implementations.</em></td>
+						                            <td>
+						                            	<input type="tex" name="yes/no">
+						                            </td>
 												</tr>
 						  						<tr class=valueInfo>
 						  							<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">buy</th>
 													<td class="value-description">Buy the selected item or buy the item at the current location. Often involves adding the current item into a shopping cart. (Implied simplification  = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">cancel</th>
 													<td class="value-description">Closes the dialog and discards any changes the user may have made within that dialog. (Implied simplification  = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">captions</th>
 													<td class="value-description">Show the settings for captions and subtitles. </td>
+													<td>yes/no</td>
 												</tr>
 						 						<tr class=valueInfo>
 						 							<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">channel</th>
 													<td class="value-description">Adjust the channel of a multimedia component. Often used with increase or decrease but is sometimes used alone as a menu name  or item. 
 						                            <em class="ednote">At risk pending implementations.</em></td>
+						                            <td>yes/no</td>
 												</tr>
 									             <tr class=valueInfo>
 									             	<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">checkout</th>
 													<td class="value-description">Proceed to the purchasing process. (Implied simplification  = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">close</th>
 													<td class="value-description">Close the current dialog. (Implied simplification = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">color</th>
 													<td class="value-description">Opens a color picker.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">compose</th>
 													<td class="value-description">Compose a new item such as an email. (Implied simplification = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">confirm</th>
 													<td class="value-description">Confirms submission of the form request to the server. For example, an "ok" button. (Implied simplification  = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">connect</th>
 													<td class="value-description">Connect to a communication channel, such as an FTP server or Voice over IP channel.  Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">copy</th>
 													<td class="value-description">Copies the selected control, item or text and places it onto the clipboard</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">cut</th>
 													<td class="value-description">Removes the selected control, item or text and places it onto the clipboard</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">date</th>
 													<td class="value-description">Opens a date control. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">decrease</th>
 													<td class="value-description">Decreases the level of the relevant setting. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">delete</th>
 													<td class="value-description">Delete the current item, selected control, or text.</td>
+													<td>yes/no</td>
 												</tr>
 									            <tr class=valueInfo>
 									             	<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">download</th>
 													<td class="value-description">Download a file from the server.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">drag</th>
 													<td class="value-description">Enables a dragged and dropped capabilities.   Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">edit</th>
 													<td class="value-description">Edit the item or selection at the current location.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">escape</th>
 													<td class="value-description">Typically used to abort, cancel or change what is currently being displayed on the screen. A common application of the the esc key is to leave full screen mode.</td>
+													<td>yes/no</td>
 												</tr>
 						            
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">expand</th>
 													<td class="value-description">Expand or collapse the current item.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">forward</th>
 													<td class="value-description">Forward the current item such as an email.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">help</th>
 													<td class="value-description">Opens a help function. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">increase</th>
 													<td class="value-description">Increases the level of the relevant setting. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">label</th>
 													<td class="value-description">Add a label to the selected item or the item at the current location.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">left</th>
 													<td class="value-description">Moves a selected item to the left into another column or list.</td>
+													<td>yes/no</td>
 												</tr>
 						           
 						   						<tr class=valueInfo>
@@ -396,313 +432,374 @@
 													<th class="value-name" scope="row">loop</th>
 													<td class="value-description">Plays the flow, presentation or a movie over and over again, once or without stopping. Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.
 						                            <em class="ednote">At risk pending implementations.</em></td>
+						                            <td>yes/no</td>
 												</tr>            
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">mediaPosition</th>
 													<td class="value-description">Adjust the current playback position in the current media.
 						                            <em class="ednote">At risk pending implementations.</em></td>
+						                            <td>yes/no</td>
 												</tr>
 						 						<tr class=valueInfo>
 						 							<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">mode</th>
 													<td class="value-description">Change the mode or functionality. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">more</th>
 													<td class="value-description">Show more information. </td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">move</th>
 													<td class="value-description">Changes the position of a selected item(s).  Often used with left, right, begin, end, increase (up) or decrease (down).</td>
+													<td>yes/no</td>
 												</tr>
 									             <tr class=valueInfo>
 									             	<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">mute</th>
 													<td class="value-description">Mute or toggle the mute option. </td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">new</th>
 													<td class="value-description">Open a new item. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">next</th>
 													<td class="value-description">Move to the next item in the series. (Implied simplification  = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 									         	<tr class=valueInfo>
 									         		<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">open</th>
 													<td class="value-description">Open an item. (Implied simplification = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">order</th>
 													<td class="value-description">Changes the position of the selected item within a list of items, while each item in the list has a layer position. Often used with increase (forward), decrease (back), first and end.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">paste</th>
 													<td class="value-description">Paste the content from the clipboard to the current position.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">pause</th>
 													<td class="value-description">Pause a multimedia, audio or video element or object. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">play</th>
 													<td class="value-description">Play a multimedia, audio or video element or object. (Implied simplification= "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">previous</th>
 													<td class="value-description">Move to the previous item in the series. (Implied simplification  = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">print</th>
 													<td class="value-description">Print the current page, selection or the item at the current location.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">profile</th>
 													<td class="value-description">Opens the user's profile page</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">properties</th>
 													<td class="value-description">Shows the properties of an item.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">received</th>
 													<td class="value-description">Open the received folder.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">refresh</th>
 													<td class="value-description">Manually refresh the current contents of the screen.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">remove</th>
 													<td class="value-description">Removes an item from a list.</td>
+													<td>yes/no</td>
 												</tr>
 						            
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">reply</th>
 													<td class="value-description">Reply to the current item such as an email. (Implied simplification = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">reset</th>
 													<td class="value-description">Resets all the controls to their initial values.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">resize</th>
 													<td class="value-description">Increase or decrease the font size.  Often used with increase or decrease.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">right</th>
 													<td class="value-description">Moves a selected item to the right into another column or list.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">save</th>
 													<td class="value-description">Save the current content. (Implied simplification = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">scroll</th>
 													<td class="value-description">Advances the view. Often used with left, right, begin, end, increase (up) or decrease (down).</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">send</th>
 													<td class="value-description">Send a form, email or request. (Implied simplification = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">sent</th>
 													<td class="value-description">Open the sent folder.</td>
+													<td>yes/no</td>
 												</tr>
 						  						<tr class=valueInfo>
 						  							<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">settings</th>
 													<td class="value-description">Open settings and options.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">skip</th>
 													<td class="value-description">Skips the current step. This is typically used in a sequence of steps.</td>
+													<td>yes/no</td>
 												</tr>
 						          
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">submit</th>
 													<td class="value-description">Submits the form data or a request to the server. (Implied simplification  = "critical".)</td>
+													<td>yes/no</td>
 												</tr>
 						 						<tr class=valueInfo>
 						 							<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">temperature</th>
 													<td class="value-description">Adjust the temperature. Often used with increase or decrease but is sometimes used alone as a menu name  or item. 
 						                            <em class="ednote">At risk pending implementations.</em></td>
+						                            <td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">toc</th>
 													<td class="value-description">Opens a table of contents.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">undo</th>
 													<td class="value-description">Revert back to the prior state before the user's most recent changes</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">upload</th>
 													<td class="value-description">Upload a file to the server.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">voiceCommands</th>
 													<td class="value-description">Activate or deactivate voice commands. Often used with  [aria-pressed = "true"] for on or [aria-pressed = "false"] for off.</td>
+													<td>yes/no</td>
 												</tr>
 						  						<tr class=valueInfo>
 						  							<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">volume</th>
 													<td class="value-description">Adjust the volume of a multimedia component. Often used with increase or decrease  but is sometimes used alone as a menu name  or item.
 						                            <em class="ednote">At risk pending implementations.</em></td>
+						                            <td>yes/no</td>
 												</tr>
 
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">about</th>
 													<td class="value-description">Information about the content owner or producer.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">accessibilityStatement</th>
 													<td class="value-description">Information about the accessibility features in a web site or web content.</td>
+													<td>yes/no</td>
 												</tr>
 						   						<tr class=valueInfo>
 						   							<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">begin</th>
 													<td class="value-description">Changes the location to the beginning item from a list of items or redirects the functionality to the first step in a sequence.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">chat</th>
 													<td class="value-description">Human help or a dialog help function such as a chat bot.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">comment</th>
 													<td class="value-description">Submit a comment on the current item.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">contact</th>
 													<td class="value-description">Opens contact information for content owner or producer.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">email</th>
 													<td class="value-description">Email address for the content owner or producer.</td>
+													<td>yes/no</td>
 												</tr>
 						  						<tr class=valueInfo>
 						  							<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">end</th>
 													<td class="value-description">Changes the location to the end item from a list of items or redirects the functionality to the last step in a sequence.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">help</th>
 													<td class="value-description">A help function that includes support or instructions.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">home</th>
 													<td class="value-description">Initial or main page of a website or application.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">language</th>
 													<td class="value-description">Available language options for the website or web content.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">left</th>
 													<td class="value-description">Changes the location of the selected item(s) to the left.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">phone</th>
 													<td class="value-description">Phone number for the content owner or producer.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">post</th>
 													<td class="value-description">Post current item. Item will be visible to other parties.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">products</th>
 													<td class="value-description">Products available from the content provider.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">related</th>
 													<td class="value-description">Adds a related item(s) to a pre-selected list of items.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">right</th>
 													<td class="value-description">Changes the location of the selected item(s) to the right.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">services</th>
 													<td class="value-description">Services available from the content provider.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">signin</th>
 													<td class="value-description">Sign in to the current web site or application.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">signout</th>
 													<td class="value-description">Sign out of the current web site or application.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">sitemap</th>
 													<td class="value-description">Content containing a list of all the pages in a web site.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">social</th>
 													<td class="value-description">Content provider on a social media platform. Note, that the specific name of the social media platform should be included in the accessible name.
 						                            <em class="ednote">At risk pending implementations.</em></td>
+						                            <td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">terms</th>
 													<td class="value-description">The terms and conditions of use applicable to the website or web content.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">tools</th>
 													<td class="value-description">Available tools for the current content.</td>
+													<td>yes/no</td>
 												</tr>
 
 
@@ -710,51 +807,61 @@
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">ad</th>
 													<td class="value-description">An advertisement or offer for a product, feature or service that is under the authors' control and is not part of an activity where it is essential.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">animations</th>
 													<td class="value-description">Computer-generated moving images. Animations are also automatically updating.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">autoStarting</th>
 													<td class="value-description">Information that starts automatically without user interaction that is presented in parallel with other content.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">autoUpdating</th>
 													<td class="value-description">Information that starts automatically and is presented in parallel with other content that updates frequently without user interaction unless the auto-updating is part of an activity where it is essential.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">chat</th>
 													<td class="value-description">An interface that allows real-time interaction of text-based messages between a sender and a receiver.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">message</th>
 													<td class="value-description">Communication sent to or left for the user.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">moving</th>
 													<td class="value-description">Elements that change locations on the screen without user interaction.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">overlay</th>
 													<td class="value-description">A part of an application or content that is displayed over the top of the main content in the same window.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">popup</th>
 													<td class="value-description">A child window that blocks user interaction to the parent window.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
 													<th class="value-name" scope="row">thirdParty</th>
 													<td class="value-description">Content that is not under the author’s control.</td>
+													<td>yes/no</td>
 												</tr>
 
 
@@ -762,106 +869,129 @@
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">additionalName</th>
 													<td class="value-description">Additional or middle name.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">additionalNameInitial</th>
 													<td class="value-description">Additional or middle name initial.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">addressLine1</th>
 													<td class="value-description">First line of street address.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">addressLine2</th>
 													<td class="value-description">Second line of street address.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">addressLine3</th>
 													<td class="value-description">Third line of street address.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">answer</th>
 													<td class="value-description">Answer to a section question.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">area</th>
 													<td class="value-description">Administrative area, state, province, or region.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bday</th>
 													<td class="value-description">Birthday.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bdayDay</th>
 													<td class="value-description">Day of birthday.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bdayMonth</th>
 													<td class="value-description">Month of birthday.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">bdayYear</th>
 													<td class="value-description">Year of birthday.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccCsc</th>
 													<td class="value-description">Credit card security codey.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccExp</th>
 													<td class="value-description">Date of expiration of credit card.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccExpMonth</th>
 													<td class="value-description">Month of expiration of credit card.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccExpYear</th>
 													<td class="value-description">Year of expiration of credit card.</td>
+													<td>yes/no</td>
 												</tr>
 										        <tr class=valueInfo>
 										        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccName</th>
 													<td class="value-description">Full name, as it appears on credit card.</td>
+													<td>yes/no</td>
+
+
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccNumber</th>
 													<td class="value-description">Credit card number.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 												 	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">ccType</th>
 													<td class="value-description">Type of payment instrument (e.g. Visa). Note that there may be a change to allow for adding options.</td>
+													<td>yes/no</td>
 						                        </tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">city</th>
 													<td class="value-description">Locality or city.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">comment</th>
 													<td class="value-description">Form comment section. Typically, a free text field.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">country</th>
 													<td class="value-description">Country name.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
@@ -870,6 +1000,7 @@
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
 						                            <em class="ednote">At risk pending implementations.</em>
 						                            </td>
+						                            <td>yes/no</td>
 						                        </tr>
 						                        
 												<tr class=valueInfo>
@@ -879,147 +1010,176 @@
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
 						                            <em class="ednote">At risk pending implementations.</em>
 						                            </td>
+						                            <td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">email</th>
 													<td class="value-description">Email address.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">familyName</th>
 													<td class="value-description">Family name, surname, or last name.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">fax</th>
 													<td class="value-description">Full fax number, including international country code.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 						                            <th class="value-name" scope="row">faxAreaCode</th>
 						                            <td class="value-description">Area code.</td>
+						                            <td>yes/no</td>
 						                        </tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">faxCountryCode</th>
 													<td class="value-description">International country code.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">faxLocal</th>
 													<td class="value-description">Local fax number: full number minus country and area codes.</td>
+													<td>yes/no</td>
 												</tr>
 
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">faxNational</th>
 													<td class="value-description">National fax number: full number minus international country code and area code.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">gender</th>
 													<td class="value-description">Gender identity.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">givenName</th>
 													<td class="value-description">Given or first name.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">honorificPrefix</th>
 													<td class="value-description">Prefix or title (Mr., Mrs., Dr., etc.) </td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">honorificSuffix</th>
 													<td class="value-description">Suffix (Jr., II, etc.)</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                       		<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">language</th>
 													<td class="value-description">Preferred language.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">name</th>
 													<td class="value-description">Full name.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">nickname</th>
 													<td class="value-description">Nickname.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">org</th>
 													<td class="value-description">Company or organization.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">photo</th>
 													<td class="value-description">Photo or avatar.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">position</th>
 													<td class="value-description">User's position or title within a company or organization.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">postalcode</th>
 													<td class="value-description">Postal or ZIP code.</td>
+													<td>yes/no</td>
 												</tr>
 						 						<tr class=valueInfo>
 						 							<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">section-*****</th>
 													<td class="value-description">Used to group forms together.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">sex</th>
 													<td class="value-description">Sex or gender.</td>
+													<td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                       		<th class="attribute-name">purpose</th>
 						                            <th class="value-name" scope="row">streetAddress</th>
 						                            <td class="value-description">Full street address condensed into one line.</td>
+						                            <td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">subject</th>
 													<td class="value-description">Form subject. Typically, a free text field.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">tel</th>
 													<td class="value-description">Full telephone number, including international country code.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telAreaCode</th>
 													<td class="value-description">Area code.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telCountryCode</th>
 													<td class="value-description">International country code.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telExtension</th>
 													<td class="value-description">Telephone extension number.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telLocal</th>
 													<td class="value-description">Local telephone number: full number minus international country code and area codes.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">telNational</th>
 													<td class="value-description">National telephone number: full number minus international country code.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
@@ -1028,6 +1188,7 @@
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
 						                            <em class="ednote">At risk pending implementations.</em>
 						                            </td>
+						                            <td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
@@ -1036,26 +1197,31 @@
 						                            <em class="note">We may remove this or harmonize with other date time standards.</em>
 						                            <em class="ednote">At risk pending implementations.</em>
 						                            </td>
+						                            <td>yes/no</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">topic</th>
 													<td class="value-description">Topic for the form. Typically, selected from a list of reserved words.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">transactionCurrency</th>
 													<td class="value-description">The monetary system being used for the transaction. Note that there may be a change to allow for adding options.</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">transactionAmount</th>
 													<td class="value-description">The amount that the user is committing to pay for a transaction. (Often used when entering a bid or sale price.)</td>
+													<td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">url</th>
 													<td class="value-description">Website URL.</td>
+													<td>yes/no</td>
 												</tr>
 
 												<tr class=valueInfo>
@@ -1068,6 +1234,7 @@
 					                                    </li>
 					                                </ul>
 					                                </td>
+					                                <td>yes/no</td>
 												</tr>
 												<tr class=valueInfo>
 														<th class="attribute-name">simplification</th>
@@ -1079,6 +1246,7 @@
 															<li>Elements that are sometimes important for a user to interact with the site, such as settings to change colors or fonts. </li>
 															<li>Elements that are used by over 60% of a user group (such as parents or teachers) when they interact with the content.</li>
 														</ul></td>
+														<td>yes/no</td>
 													</tr>
 
 												<tr class=valueInfo>
@@ -1086,7 +1254,8 @@
 														<th class="value-name" scope="row"><code>low</code></th>
 														<td class="value-description">
 					                                        The <code>low</code> setting should be used on elements that are rarely used or only used by advanced users. Example: The terms and services or the archive button for an email application. 
-												     </td>
+												     	</td>
+												     	<td>yes/no</td>
 													</tr>
 
 
