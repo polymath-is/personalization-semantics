@@ -689,7 +689,7 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
-													<th class="value-name" scope="row">email</th>
+													<th class="value-name" scope="row">email-recipient</th>
 													<td class="value-description">Email address for the content owner or producer.</td>
 													<td>Yes, repeat with email in purpose?</td>
 												</tr>
@@ -800,7 +800,7 @@
 
 												<tr class=valueInfo>
 													<th class="attribute-name">distraction</th>
-													<th class="value-name" scope="row">ad</th>
+													<th class="value-name" scope="row">advertisement</th>
 													<td class="value-description">An advertisement or offer for a product, feature or service that is under the authors' control and is not part of an activity where it is essential.</td>
 													<td>No</td>
 												</tr>
@@ -862,9 +862,9 @@
 
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">additionalName</th>
-													<td class="value-description">Additional or middle name.</td>
-													<td>Yes, additional-name</td>
+													<th class="value-name" scope="row">additional-name</th>
+													<td class="value-description">Additional names (in some Western cultures, also known as middle names, forenames other than the first name).</td>
+													<td>Yes</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
@@ -874,20 +874,20 @@
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">addressLine1</th>
-													<td class="value-description">First line of street address.</td>
+													<th class="value-name" scope="row">address-line1</th>
+													<td class="value-description">Street address (one line per field, line 1).</td>
 													<td>Yes, address-line1</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">addressLine2</th>
-													<td class="value-description">Second line of street address.</td>
+													<th class="value-name" scope="row">address-line2</th>
+													<td class="value-description">Street address (one line per field, line 2).</td>
 													<td>Yes, address-line2</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">addressLine3</th>
-													<td class="value-description">Third line of street address.</td>
+													<th class="value-name" scope="row">address-line3</th>
+													<td class="value-description">Street address (one line per field, line 3).</td>
 													<td>Yes, address-line3</td>
 												</tr>
 												<tr class=valueInfo>
@@ -910,49 +910,49 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">bdayDay</th>
-													<td class="value-description">Day of birthday.</td>
+													<th class="value-name" scope="row">bday-day</th>
+													<td class="value-description">Day component of birthday.</td>
 													<td>Yes, bday-day</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">bdayMonth</th>
-													<td class="value-description">Month of birthday.</td>
+													<th class="value-name" scope="row">bday-month</th>
+													<td class="value-description">Month component of birthday.</td>
 													<td>Yes, bday-month</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">bdayYear</th>
-													<td class="value-description">Year of birthday.</td>
+													<th class="value-name" scope="row">bday-year</th>
+													<td class="value-description">Year component of birthday.</td>
 													<td>Yes, bday-year</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">ccCsc</th>
-													<td class="value-description">Credit card security codey.</td>
+													<th class="value-name" scope="row">cc-csc</th>
+													<td class="value-description">Security code for the payment instrument (also known as the card security code (CSC), card validation code (CVC), card verification value (CVV), signature panel code (SPC), credit card ID (CCID), etc).</td>
 													<td>Yes, cc-csc</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">ccExp</th>
-													<td class="value-description">Date of expiration of credit card.</td>
+													<th class="value-name" scope="row">cc-exp</th>
+													<td class="value-description">Expiration date of the payment instrument.</td>
 													<td>Yes, cc-exp</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">ccExpMonth</th>
-													<td class="value-description">Month of expiration of credit card.</td>
+													<th class="value-name" scope="row">cc-exp-month</th>
+													<td class="value-description">Month component of the expiration date of the payment instrument.</td>
 													<td>Yes, cc-exp-month</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">ccExpYear</th>
-													<td class="value-description">Year of expiration of credit card.</td>
+													<th class="value-name" scope="row">cc-exp-year</th>
+													<td class="value-description">Year component of the expiration date of the payment instrument.</td>
 													<td>Yes, cc-exp-year</td>
 												</tr>
 										        <tr class=valueInfo>
 										        	<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">ccName</th>
+													<th class="value-name" scope="row">cc-name</th>
 													<td class="value-description">Full name, as it appears on credit card.</td>
 													<td>Yes, cc-name</td>
 
@@ -960,21 +960,39 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">ccNumber</th>
-													<td class="value-description">Credit card number.</td>
+													<th class="value-name" scope="row">cc-number</th>
+													<td class="value-description">Code identifying the payment instrument (e.g., the credit card number).</td>
 													<td>Yes, cc-number</td>
 												</tr>
 												<tr class=valueInfo>
 												 	<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">ccType</th>
-													<td class="value-description">Type of payment instrument (e.g. Visa). Note that there may be a change to allow for adding options.</td>
+													<th class="value-name" scope="row">cc-type</th>
+													<td class="value-description">Type of payment instrument.</td>
 													<td>Yes, cc-type</td>
 						                        </tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">city</th>
-													<td class="value-description">Locality or city.</td>
-													<td>Yes, address-level2, in autocomplete they use address-level(1-4) for administrative levels.</td>
+													<th class="value-name" scope="row">address-level4</th>
+													<td class="value-description">The most fine-grained administrative level, in addresses with four administrative levels.</td>
+													<td>Yes.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">address-level3</th>
+													<td class="value-description">The third administrative level, in addresses with three or more administrative levels.</td>
+													<td>Yes.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">address-level2</th>
+													<td class="value-description">TThe second administrative level, in addresses with two or more administrative levels; in the countries with two administrative levels, this would typically be the city, town, village, or other locality within which the relevant street address is found.</td>
+													<td>Yes.</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">address-level1</th>
+													<td class="value-description">The broadest administrative level in the address, i.e., the province within which the locality is found; for example, in the US, this would be the state; in Switzerland it would be the canton; in the UK, the post town.</td>
+													<td>Yes.</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
@@ -985,8 +1003,14 @@
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">country</th>
+													<td class="value-description">Country code.</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+						                        	<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">country-name</th>
 													<td class="value-description">Country name.</td>
-													<td>Yes, country-name</td>
+													<td>Yes</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
@@ -1010,13 +1034,13 @@
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">email</th>
-													<td class="value-description">Email address.</td>
-													<td>Yes, email, repeat with email in destination?</td>
+													<td class="value-description">E-mail address.</td>
+													<td>Yes</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">familyName</th>
-													<td class="value-description">Family name, surname, or last name.</td>
+													<th class="value-name" scope="row">family-name</th>
+													<td class="value-description">Family name (in some Western cultures, also known as the last name or surname).</td>
 													<td>Yes, family-name</td>
 												</tr>
 												<tr class=valueInfo>
@@ -1052,26 +1076,26 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">gender</th>
-													<td class="value-description">Gender identity.</td>
+													<th class="value-name" scope="row">sex</th>
+													<td class="value-description">Gender identity (e.g., Female, Fa’afafine).</td>
 													<td>Yes, sex</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">givenName</th>
-													<td class="value-description">Given or first name.</td>
+													<th class="value-name" scope="row">given-name</th>
+													<td class="value-description">Given name (in some Western cultures, also known as the first name).</td>
 													<td>Yes, given-name</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">honorificPrefix</th>
-													<td class="value-description">Prefix or title (Mr., Mrs., Dr., etc.) </td>
+													<th class="value-name" scope="row">honorific-prefix</th>
+													<td class="value-description">Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").</td>
 													<td>Yes, honorific-prefix</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">honorificSuffix</th>
-													<td class="value-description">Suffix (Jr., II, etc.)</td>
+													<th class="value-name" scope="row">honorific-suffix</th>
+													<td class="value-description">Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II").</td>
 													<td>Yes, honorific-suffix</td>
 												</tr>
 						                        <tr class=valueInfo>
@@ -1089,13 +1113,13 @@
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">nickname</th>
-													<td class="value-description">Nickname.</td>
+													<td class="value-description">Nickname, screen name, handle: a typically short name used instead of the full name.</td>
 													<td>Yes, nickname</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">org</th>
-													<td class="value-description">Company or organization.</td>
+													<th class="value-name" scope="row">organization</th>
+													<td class="value-description">Company name corresponding to the person, address, or contact information in the other fields associated with this field.</td>
 													<td>Yes, organization</td>
 												</tr>
 												<tr class=valueInfo>
@@ -1112,8 +1136,8 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">postalcode</th>
-													<td class="value-description">Postal or ZIP code.</td>
+													<th class="value-name" scope="row">postal-code</th>
+													<td class="value-description">Postal code, post code, ZIP code, CEDEX code (if CEDEX, append "CEDEX", and the arrondissement, if relevant, to the address-level2 field).</td>
 													<td>Yes, postal-code</td>
 												</tr>
 						 						<tr class=valueInfo>
@@ -1121,12 +1145,6 @@
 													<th class="value-name" scope="row">section-*****</th>
 													<td class="value-description">Used to group forms together.</td>
 													<td>No</td>
-												</tr>
-												<tr class=valueInfo>
-													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">sex</th>
-													<td class="value-description">Sex or gender.</td>
-													<td>Yes, repeat with gender?</td>
 												</tr>
 						                        <tr class=valueInfo>
 						                       		<th class="attribute-name">purpose</th>
@@ -1148,32 +1166,32 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">telAreaCode</th>
-													<td class="value-description">Area code.</td>
+													<th class="value-name" scope="row">tel-area-code</th>
+													<td class="value-description">Area code component of the telephone number, with a country-internal prefix applied if applicable.</td>
 													<td>Yes, tel-area-code</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">telCountryCode</th>
-													<td class="value-description">International country code.</td>
+													<th class="value-name" scope="row">tel-country-code</th>
+													<td class="value-description">Country code component of the telephone number.</td>
 													<td>Yes, tel-country-code</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">telExtension</th>
-													<td class="value-description">Telephone extension number.</td>
+													<th class="value-name" scope="row">tel-extension</th>
+													<td class="value-description">Telephone number internal extension code.</td>
 													<td>Yes, tel-extension</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">telLocal</th>
-													<td class="value-description">Local telephone number: full number minus international country code and area codes.</td>
+													<th class="value-name" scope="row">tel-local</th>
+													<td class="value-description">Telephone number without the country code and area code components.</td>
 													<td>Yes, tel-local</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">telNational</th>
-													<td class="value-description">National telephone number: full number minus international country code.</td>
+													<th class="value-name" scope="row">tel-national</th>
+													<td class="value-description">Telephone number without the county code component, with a country-internal prefix applied if applicable.</td>
 													<td>Yes, tel-national</td>
 												</tr>
 												<tr class=valueInfo>
@@ -1202,22 +1220,90 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">transactionCurrency</th>
-													<td class="value-description">The monetary system being used for the transaction. Note that there may be a change to allow for adding options.</td>
+													<th class="value-name" scope="row">transaction-currency</th>
+													<td class="value-description">The currency that the user would prefer the transaction to use.</td>
 													<td>Yes, transaction-currency</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
-													<th class="value-name" scope="row">transactionAmount</th>
-													<td class="value-description">The amount that the user is committing to pay for a transaction. (Often used when entering a bid or sale price.)</td>
-													<td>Yes, transaction-amount</td>
+													<th class="value-name" scope="row">transaction-amount</th>
+													<td class="value-description">The amount that the user would like for the transaction (e.g. when entering a bid or sale price).</td>
+													<td>Yes</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">url</th>
-													<td class="value-description">Website URL.</td>
-													<td>Yes, url</td>
+													<td class="value-description">Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field.</td>
+													<td>Yes</td>
 												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">organization-title</th>
+													<td class="value-description">Job title (e.g., "Software Engineer", "Senior Vice President", "Deputy Managing Director”).</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">username</th>
+													<td class="value-description">A username.</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">new-password</th>
+													<td class="value-description">A new password (e.g., when creating an account or changing a password).</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">current-password</th>
+													<td class="value-description">The current password for the account identified by the username field (e.g., when logging in).</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">cc-given-name</th>
+													<td class="value-description">Given name as given on the payment instrument (in some Western cultures, also known as the first name).</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">cc-additional-name</th>
+													<td class="value-description">Additional names given on the payment instrument (in some Western cultures, also known as middle names, forenames other than the first name).</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">cc-family-name</th>
+													<td class="value-description">Family name given on the payment instrument (in some Western cultures, also known as the last name or surname.</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">tel-local-prefix</th>
+													<td class="value-description">First part of the component of the telephone number that follows the area code, when that component is split into two components.</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">tel-local-suffix</th>
+													<td class="value-description">Second part of the component of the telephone number that follows the area code, when that component is split into two components.</td>
+													<td>Yes</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">purpose</th>
+													<th class="value-name" scope="row">impp</th>
+													<td class="value-description">URL representing an instant messaging protocol endpoint (for example, "aim:goim?screenname=example" or "xmpp:fred@example.net”).</td>
+													<td>Yes</td>
+												</tr>
+
+
+
+
+
+
+
+
 
 												<tr class=valueInfo>
 													<th class="attribute-name">simplification</th>
