@@ -399,8 +399,8 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
-													<th class="value-name" scope="row">help</th>
-													<td class="value-description">Opens a help function. (Implied simplification= "critical".)</td>
+													<th class="value-name" scope="row">opens-in-page-help</th>
+													<td class="value-description">Opens a help function on the same page. (Implied simplification= "critical".)</td>
 													<td>No</td>
 												</tr>
 												<tr class=valueInfo>
@@ -417,8 +417,14 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
+													<th class="value-name" scope="row">language</th>
+													<td class="value-description">Ability to select the prefered language for the content.</td>
+													<td>No</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">left</th>
-													<td class="value-description">Moves a selected item to the left into another column or list.</td>
+													<td class="value-description">Changes the location of the selected item(s) to the left.</td>
 													<td>No</td>
 												</tr>
 						           
@@ -469,7 +475,7 @@
 						                        <tr class=valueInfo>
 						                        	<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">next</th>
-													<td class="value-description">Move to the next item in the series. (Implied simplification  = "critical".)</td>
+													<td class="value-description">Go to the next item in the series. (Implied simplification  = "critical".)</td>
 													<td>No</td>
 												</tr>
 									         	<tr class=valueInfo>
@@ -505,7 +511,7 @@
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">previous</th>
-													<td class="value-description">Move to the previous item in the series. (Implied simplification  = "critical".)</td>
+													<td class="value-description">Go to the previous item in the series. (Implied simplification  = "critical".)</td>
 													<td>No</td>
 												</tr>
 												<tr class=valueInfo>
@@ -566,7 +572,7 @@
 												<tr class=valueInfo>
 													<th class="attribute-name">action</th>
 													<th class="value-name" scope="row">right</th>
-													<td class="value-description">Moves a selected item to the right into another column or list.</td>
+													<td class="value-description">Changes the location of the selected item(s) to the right.</td>
 													<td>No</td>
 												</tr>
 												<tr class=valueInfo>
@@ -677,12 +683,6 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
-													<th class="value-name" scope="row">comment</th>
-													<td class="value-description">Submit a comment on the current item.</td>
-													<td>No</td>
-												</tr>
-												<tr class=valueInfo>
-													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">contact</th>
 													<td class="value-description">Opens contact information for content owner or producer.</td>
 													<td>No</td>
@@ -701,20 +701,20 @@
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
+													<th class="value-name" scope="row">feedback</th>
+													<td class="value-description">Submit feedback or comment on the current item.</td>
+													<td>No</td>
+												</tr>
+												<tr class=valueInfo>
+													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">help</th>
-													<td class="value-description">A help function that includes support or instructions.</td>
+													<td class="value-description">A help function that navigates to support or instructions.</td>
 													<td>No</td>
 												</tr>
 												<tr class=valueInfo>
 													<th class="attribute-name">destination</th>
 													<th class="value-name" scope="row">home</th>
 													<td class="value-description">Initial or main page of a website or application.</td>
-													<td>No</td>
-												</tr>
-												<tr class=valueInfo>
-													<th class="attribute-name">destination</th>
-													<th class="value-name" scope="row">language</th>
-													<td class="value-description">Available language options for the website or web content.</td>
 													<td>No</td>
 												</tr>
 												<tr class=valueInfo>
@@ -1129,7 +1129,7 @@
 						                        <tr class=valueInfo>
 						                       		<th class="attribute-name">purpose</th>
 													<th class="value-name" scope="row">language</th>
-													<td class="value-description">Preferred language.</td>
+													<td class="value-description">Ability to select the prefered language for the content.</td>
 													<td>Yes</td>
 												</tr>
 												<tr class=valueInfo>
