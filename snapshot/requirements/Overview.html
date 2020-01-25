@@ -568,9 +568,9 @@ var[data-type]:hover::before {
   "permalinkHide": false,
   "tocIntroductory": true,
   "noRecTrack": true,
-  "specStatus": "ED",
+  "specStatus": "FPWD",
   "shortName": "personalization-semantics-requirements-1.0",
-  "copyrightStart": "2018",
+  "copyrightStart": "2020",
   "license": "document",
   "edDraftURI": "https://w3c.github.io/personalization-semantics/requirements/",
   "editors": [
@@ -610,18 +610,18 @@ var[data-type]:hover::before {
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83907/status",
   "localBiblio": {},
   "publishISODate": "2020-01-25T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 25 January 2020"
-}</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+  "generatedSubtitle": "First Public Working Draft 25 January 2020"
+}</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
 	<body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48"></a> <h1 id="title" class="title p-name">Requirements for Personalization Semantics</h1>
       
       <h2>
-        W3C Editor's Draft
+        W3C First Public Working Draft
         <time class="dt-published" datetime="2020-01-25">25 January 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://w3c.github.io/personalization-semantics/requirements/">https://w3c.github.io/personalization-semantics/requirements/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2020/WD-personalization-semantics-requirements-1.0-20200125/">https://www.w3.org/TR/2020/WD-personalization-semantics-requirements-1.0-20200125/</a>
               </dd><dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/personalization-semantics-requirements-1.0/">https://www.w3.org/TR/personalization-semantics-requirements-1.0/</a>
               </dd>
@@ -649,7 +649,7 @@ var[data-type]:hover::before {
       <p class="copyright">
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
       ©
-      2018-2020
+      2020
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -664,8 +664,8 @@ var[data-type]:hover::before {
 			<p>Requirements for Personalization Semantics</p>
 		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p> <p>
-      This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-      Editor's Draft.
+      This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as a
+      First Public Working Draft.
       
     </p><p>
       
@@ -675,7 +675,7 @@ var[data-type]:hover::before {
             (<a href="https://lists.w3.org/Archives/Public/public-personalization-tf/">archives</a>).
           
     </p><p>
-      Publication as an Editor's Draft does not imply endorsement by the
+      Publication as a First Public Working Draft does not imply endorsement by the
       <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
       obsoleted by other documents at any time. It is inappropriate to cite this
       document as other than work in progress.
@@ -916,33 +916,33 @@ var[data-type]:hover::before {
                 Use case: The user would prefer to see only the critical information and required fields to complete a task.
                 </p>
                 <h4 id="original">Original<a class="self-link" aria-label="§" href="#simplification-1"></a></h4>
-                <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span> 
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Enter your e-mail address to subscribe to our mailing list.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span> 
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"address"</span>&gt;</span>Enter email address:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"address"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"address"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Subscribe"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre aria-busy="true">&lt;div&gt;
+    &lt;form action="#" method="post"&gt;&lt;br /&gt; 
+        &lt;p&gt;Enter your e-mail address to subscribe to our mailing list.&lt;/p&gt;
+        &lt;br /&gt; 
+        &lt;label for="address"&gt;Enter email address:&lt;/label&gt;
+        &lt;input type="text" id="address" name="address"/&gt;&lt;/p&gt;
+        &lt;br /&gt;
+        &lt;input type="submit" value="Subscribe" /&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
                 <h4 id="data-attributes">data-* Attributes<a class="self-link" aria-label="§" href="#simplification-1"></a></h4>
                 
-                <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span> 
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Note: [*]denotes mandatory field<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Enter your e-mail address to subscribe to our mailing list.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span> 
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"address"</span>&gt;</span>Enter email address:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"address"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"address"</span> <span class="hljs-attr">data-purpose</span>=<span class="hljs-string">"email"</span> 
-            <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"critical"</span> 
-            <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span>/&gt;</span>[*]
-        <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"critical"</span> 
-            <span class="hljs-attr">value</span>=<span class="hljs-string">"Subscribe"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span> 
-    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre aria-busy="true">&lt;div&gt;
+      &lt;form action="#" method="post"&gt;&lt;br /&gt; 
+        &lt;p&gt;Note: [*]denotes mandatory field&lt;/p&gt;
+        &lt;p&gt;Enter your e-mail address to subscribe to our mailing list.&lt;/p&gt;
+        &lt;br /&gt; 
+        &lt;label for="address"&gt;Enter email address:&lt;/label&gt;
+        &lt;input type="text" id="address" name="address" data-purpose="email" 
+            data-simplification="critical" 
+            aria-required="true"/&gt;[*]
+        &lt;br /&gt;
+        &lt;input type="submit" data-simplification="critical" 
+            value="Subscribe" /&gt;
+        &lt;br /&gt; 
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
                 <p>
                 
                 </p>
@@ -961,30 +961,30 @@ var[data-type]:hover::before {
                     The user would prefer to see only the critical information and required fields to complete a task.
                 </p>
                 <h4 id="original-simplification-required">Original - Simplification/Required<a class="self-link" aria-label="§" href="#simplification-with-required-fields"></a></h4>
-                <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"1"</span>&gt;</span>send<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"2"</span>&gt;</span>undo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"3"</span>"&gt;</span>lable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"4"</span>&gt;</span>send later<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"5"</span>&gt;</span>mark urgent<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre aria-busy="true">&lt;div&gt;
+    &lt;button id="1"&gt;send&lt;/button&gt;
+    &lt;button id="2"&gt;undo&lt;/button&gt;
+    &lt;button id="3""&gt;lable&lt;/button&gt;
+    &lt;button id="4"&gt;send later&lt;/button&gt;
+    &lt;button id="5"&gt;mark urgent&lt;/button&gt;
+&lt;/div&gt;</pre>
                 <h4 id="data-attributes-simplification-required">data-* Attributes - Simplification/Required<a class="self-link" aria-label="§" href="#simplification-with-required-fields"></a></h4>
-                <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"critical"</span> 
-        <span class="hljs-attr">data-action</span>=<span class="hljs-string">"send"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"send"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"high"</span> <span class="hljs-attr">data-action</span>=<span class="hljs-string">"undo"</span>&gt;</span>undo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"normal"</span>&gt;</span>lable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"normal"</span>&gt;</span>send later<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"normal"</span>&gt;</span>mark urgent<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre aria-busy="true">&lt;div&gt;
+    &lt;input type="submit" data-simplification="critical" 
+        data-action="send" value="send" /&gt;
+    &lt;button id="2" data-simplification="high" data-action="undo"&gt;undo&lt;/button&gt;
+    &lt;button id="3" data-simplification="normal"&gt;lable&lt;/button&gt;
+    &lt;button id="4" data-simplification="normal"&gt;send later&lt;/button&gt;
+    &lt;button id="5" data-simplification="normal"&gt;mark urgent&lt;/button&gt;
+&lt;/div&gt;</pre>
                 <h4 id="attributes-only-simplification-required">Attributes Only - Simplification/Required<a class="self-link" aria-label="§" href="#simplification-with-required-fields"></a></h4>
-                <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">context</span> =<span class="hljs-string">"critical send"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"send"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"high undo"</span>&gt;</span>undo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"normal"</span>&gt;</span>lable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"normal"</span>&gt;</span>send later<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"normal"</span>&gt;</span>mark urgent<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre aria-busy="true">&lt;div&gt;
+    &lt;input type="submit" context ="critical send" value="send" /&gt;
+    &lt;button id="2" context="high undo"&gt;undo&lt;/button&gt;
+    &lt;button id="3" context="normal"&gt;lable&lt;/button&gt;
+    &lt;button id="4" context="normal"&gt;send later&lt;/button&gt;
+    &lt;button id="5" context="normal"&gt;mark urgent&lt;/button&gt;
+&lt;/div&gt;</pre>
             </section>
             
             
@@ -1029,36 +1029,36 @@ var[data-type]:hover::before {
                         The user needs content that does not use numbers and needs extra help and information to complete a task.
                     </p>
                     <h5 id="original-0">Original<a class="self-link" aria-label="§" href="#numberfree-and-extrahelp"></a></h5>
-                    <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <pre aria-busy="true">&lt;div&gt;
     7 out of 10 people order pizza with some kind of meat topping. 
     Select the toppings below in order of preference that you would 
     order on pizza.
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+&lt;/div&gt;
+&lt;form&gt;
     sophisticated form to select/rank pizza toppings in order of preference
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre>
+&lt;/form&gt;</pre>
                     <h5 id="x3-attributes">3 Attributes<a class="self-link" aria-label="§" href="#numberfree-and-extrahelp"></a></h5>
-                    <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"numberfree"</span> <span class="hljs-attr">easylang</span>=<span class="hljs-string">"most people"</span>&gt;</span>
+                    <pre aria-busy="true">&lt;div&gt;
+    &lt;span context="numberfree" easylang="most people"&gt;
          7 out of 10 people
-    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
+    &lt;/span&gt; 
         order pizza with some kind of meat topping. 
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"extrahelp"</span> <span class="hljs-attr">reference</span>=<span class="hljs-string">"href-to-simplifiedInstructions"</span>&gt;</span>
+    &lt;span context="extrahelp" reference="href-to-simplifiedInstructions"&gt;
         Select the toppings below in order of preference that you would 
         order on pizza.
-    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+    &lt;/span&gt;
+&lt;/div&gt;</pre>
                     <h5 id="data-attributes-0">data-* Attributes<a class="self-link" aria-label="§" href="#numberfree-and-extrahelp"></a></h5>
-                    <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-numberfree</span>=<span class="hljs-string">"Most people"</span>&gt;</span>
+                    <pre aria-busy="true">&lt;div&gt;
+  &lt;span data-numberfree="Most people"&gt;
      7 out of 10 people
-  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
+  &lt;/span&gt; 
   order pizza with some kind of meat topping. 
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-extrahelp</span>=<span class="hljs-string">"href-to-simplifiedInstructions"</span>&gt;</span>
+  &lt;span data-extrahelp="href-to-simplifiedInstructions"&gt;
      Select the toppings below in order of preference that 
      you would order on pizza.
-  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  &lt;/span&gt;
+&lt;/div&gt;</pre>
                     </section>
 
                     <section id="numberfree-and-easylang-1">
@@ -1067,24 +1067,24 @@ var[data-type]:hover::before {
                              The user prefers alternative text that does not use numerical concepts as well as content that is easier to read and understand.
                         </p>
                             <h5 id="original-1">Original - 1 <a class="self-link" aria-label="§" href="#numberfree-and-easylang-1"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                        <pre aria-busy="true">&lt;p&gt;
    Comparing the present clock-reported time which is 5 minutes
    after 09:00 AM with what we previously discussed 
    yesterday, and made an agreement about, 
    it seems that I myself may not be exactly on schedule
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+&lt;/p&gt;</pre>
                             <h5 id="data-attributes-1">data-* Attributes - 1<a class="self-link" aria-label="§" href="#numberfree-and-easylang-1"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">easylang</span>=<span class="hljs-string">"I'm running late"</span>&gt;</span>
+                        <pre aria-busy="true"><div>
+    &lt;span easylang="I'm running late"&gt;
         Comparing the present clock-reported time which is 
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-numberfree</span>=<span class="hljs-string">"midmorning"</span>&gt;</span>
+        &lt;span data-numberfree="midmorning"&gt;
            5 minutes after 09:00 AM
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
+        &lt;/span&gt; 
         with what we previously discussed 
         yesterday, and made an agreement about, it seems that 
         I myself may not be exactly on schedule
-    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-</code></pre>
+    &lt;/span&gt;
+</div></pre>
                     </section>
                    <section id="numberfree-and-easylang-2">
                         <h4 id="x3-5-3-numberfree-and-easylang-2"><bdi class="secno">3.5.3 </bdi>Numberfree and easylang - 2<a class="self-link" aria-label="§" href="#numberfree-and-easylang-2"></a></h4>
@@ -1092,24 +1092,24 @@ var[data-type]:hover::before {
                              The user prefers alternative text that is easy to read and understand but is good with numbers (eg dyslexic)
                         </p>
                             <h5 id="original-2">Original - 2<a class="self-link" aria-label="§" href="#numberfree-and-easylang-2"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                        <pre aria-busy="true">&lt;p&gt;
    Comparing the present clock-reported time 
    you many wish to come a bit later than the normal time.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+&lt;/p&gt;</pre>
                             <h5 id="data-attributes-2">data-* Attributes -2<a class="self-link" aria-label="§" href="#numberfree-and-easylang-2"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-easylang</span>=<span class="hljs-string">"come to the meeting at 9:10"</span>&gt;</span>
+                        <pre aria-busy="true">&lt;div&gt;
+      &lt;span data-easylang="come to the meeting at 9:10"&gt;
            Comparing the present clock-reported time you many wish 
            to come a bit later then the normal time
-      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      &lt;/span&gt; 
+    &lt;/div&gt;</pre>
                        <h5 id="three-attributes-2">Three Attributes -2<a class="self-link" aria-label="§" href="#numberfree-and-easylang-2"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-easylang</span>=<span class="hljs-string">"come to the meeting at 9:10"</span>&gt;</span>
+                        <pre aria-busy="true">&lt;div&gt;
+    &lt;span data-easylang="come to the meeting at 9:10"&gt;
         Comparing the present clock-reported time 
         you many wish to come a bit later then the normal time
-    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+    &lt;/span&gt; 
+&lt;/div&gt;</pre>
                     </section>
                  
                <section id="numberfree-and-easylang-3">
@@ -1118,22 +1118,22 @@ var[data-type]:hover::before {
                              The user can understand words well but has dyscalculia and does not understand numbers
                         </p>
                             <h5 id="original-3">Original - 3<a class="self-link" aria-label="§" href="#numberfree-and-easylang-3"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                        <pre aria-busy="true">&lt;p&gt;
   meeting is starting 10 minutes late
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+&lt;/p&gt;</pre>
                             <h5 id="data-attributes-3">data-* Attributes -3<a class="self-link" aria-label="§" href="#numberfree-and-easylang-3"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-easylang</span>=<span class="hljs-string">"come a bit later than the normal time - enough time for a cup of tea... "</span>&gt;</span>
+                        <pre aria-busy="true">&lt;div&gt;
+   &lt;span data-easylang="come a bit later than the normal time - enough time for a cup of tea... "&gt;
       meeting is starting 10 minutes late
-   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+   &lt;/span&gt; 
+&lt;/div&gt;</pre>
                         
                         <h5 id="three-attributes-2-0">Three Attributes -2<a class="self-link" aria-label="§" href="#numberfree-and-easylang-3"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-easylang</span>=<span class="hljs-string">"come a bit later then the normal time - enough time for a cup of tea... "</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"numbers"</span>&gt;</span>
+                        <pre aria-busy="true">&lt;div&gt;
+      &lt;span data-easylang="come a bit later then the normal time - enough time for a cup of tea... " context="numbers"&gt;
          meeting is starting 10 minuets late
-      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      &lt;/span&gt; 
+&lt;/div&gt;</pre>
                     </section>
     
         <section id="three-text-field-use-cases">
@@ -1153,27 +1153,27 @@ var[data-type]:hover::before {
                         In this example search criteria in one part of a page controls the results in anther region which shows the side effects of a drug. Other buttons may show dosage etc. in the results region
                     </p>
                     <h5 id="original-4">Original<a class="self-link" aria-label="§" href="#feedback-explain-and-easylang"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span>  
-    <span class="hljs-attr">data-context</span> =<span class="hljs-string">"critical"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"refresh"</span> 
-    <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"region2"</span> 
-/&gt;</span></code></pre>
+                        <pre aria-busy="true">&lt;input  
+    data-context ="critical" value="refresh" 
+    aria-controls="region2" 
+/&gt;</pre>
                     <h5 id="data">data-*<a class="self-link" aria-label="§" href="#feedback-explain-and-easylang"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">data-simplification</span>=<span class="hljs-string">"critical"</span>  
-    <span class="hljs-attr">data-feedback</span>=<span class="hljs-string">"the results now are for ibuprofen side effect"</span> 
-    <span class="hljs-attr">value</span>=<span class="hljs-string">"refresh"</span> 
-    <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"region2"</span> 
-    <span class="hljs-attr">data-easyLang</span>=<span class="hljs-string">"get the side effects"</span> 
-    <span class="hljs-attr">data-explain</span>=<span class="hljs-string">"press this button to see the side effects of a drug"</span>  
-/&gt;</span></code></pre>
+                        <pre aria-busy="true">&lt;input  data-simplification="critical"  
+    data-feedback="the results now are for ibuprofen side effect" 
+    value="refresh" 
+    aria-controls="region2" 
+    data-easyLang="get the side effects" 
+    data-explain="press this button to see the side effects of a drug"  
+/&gt;</pre>
                     <h5 id="three-attributes">Three Attributes<a class="self-link" aria-label="§" href="#feedback-explain-and-easylang"></a></h5>
                         <div class="note" id="issue-container-generatedID-8"><div role="heading" class="ednote-title marker" id="h-ednote-8" aria-level="6"><span>Editor's note</span></div><p class="">I could not do this in three attributes. So I did what I could</p></div>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">context</span>=<span class="hljs-string">"critical"</span> 
-   <span class="hljs-attr">data-feedback</span>=<span class="hljs-string">"the results now are for ibuprofen side effect"</span> 
-   <span class="hljs-attr">value</span>=<span class="hljs-string">"refresh"</span> 
-   <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"region2"</span> 
-   <span class="hljs-attr">data-easyLang</span>=<span class="hljs-string">"get the side effects"</span> 
-   <span class="hljs-attr">data-explain</span>=<span class="hljs-string">"press this button to see the side effects of a drug"</span>  
-/&gt;</span></code></pre>
+                        <pre aria-busy="true">&lt;input context="critical" 
+   data-feedback="the results now are for ibuprofen side effect" 
+   value="refresh" 
+   aria-controls="region2" 
+   data-easyLang="get the side effects" 
+   data-explain="press this button to see the side effects of a drug"  
+/&gt;</pre>
                     </section>
 
             </section>
@@ -1192,29 +1192,29 @@ var[data-type]:hover::before {
                         <li>help</li>
                     </ul>
                     <h5 id="original-5">Original<a class="self-link" aria-label="§" href="#symbol-and-extra-help"></a></h5>
-                        <pre aria-busy="false"><code class="hljs javascript">&lt;div&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>warning<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span></span> 
-  <span class="hljs-keyword">in</span> the event <span class="hljs-keyword">of</span> a siren go to the designated protected area
-&lt;<span class="hljs-regexp">/div&gt;</span></code></pre>
+                        <pre aria-busy="true">&lt;div&gt;
+  &lt;strong&gt;warning&lt;/strong&gt; 
+  in the event of a siren go to the designated protected area
+&lt;/div&gt;</pre>
                     <h5 id="data-0">data-*<a class="self-link" aria-label="§" href="#symbol-and-extra-help"></a></h5>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">region</span>=<span class="hljs-string">"warning"</span>&gt;</span>warning<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> 
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-symbol</span>=<span class="hljs-string">"blissymbolics.org/siren"</span>&gt;</span> in the event of a siren <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-symbol</span>=<span class="hljs-string">"blissymbolics.org/goto"</span>&gt;</span> go to <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-symbol</span>=<span class="hljs-string">"blissymbolics.org/shelter"</span> 
-    <span class="hljs-attr">data-extrahelp</span>=<span class="hljs-string">"mysite/whatisashelter-easylang.html"</span>&gt;</span>the designated protected area
-  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                        <pre aria-busy="true">&lt;div&gt;
+  &lt;strong region="warning"&gt;warning&lt;/strong&gt; 
+  &lt;span data-symbol="blissymbolics.org/siren"&gt; in the event of a siren &lt;/span&gt;
+  &lt;span data-symbol="blissymbolics.org/goto"&gt; go to &lt;/span&gt;
+  &lt;span data-symbol="blissymbolics.org/shelter" 
+    data-extrahelp="mysite/whatisashelter-easylang.html"&gt;the designated protected area
+  &lt;/span&gt;
+&lt;/div&gt;</pre>
                     <h5 id="three-attributes-0">Three Attributes<a class="self-link" aria-label="§" href="#symbol-and-extra-help"></a></h5>
                         <div class="note" id="issue-container-generatedID-9"><div role="heading" class="ednote-title marker" id="h-ednote-9" aria-level="6"><span>Editor's note</span></div><p class="">I could not do this in three attributes. So I did what I could</p></div>
-                        <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> 
-  <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>  <span class="hljs-attr">context</span>=<span class="hljs-string">"warning"</span>&gt;</span>warning<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> 
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">reference</span>=<span class="hljs-string">"blissymbolics.org/siren"</span>&gt;</span>in the event of a siren<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>   
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">reference</span>=<span class="hljs-string">"blissymbolics.org/goto"</span>&gt;</span> go to <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">reference</span>=<span class="hljs-string">"blissymbolics.org/shelter"</span> <span class="hljs-attr">extrahelp</span>=<span class="hljs-string">"mysite/whatisashelter-easylang.html"</span>&gt;</span>
+                        <pre aria-busy="true">&lt;div&gt; 
+  &lt;strong  context="warning"&gt;warning&lt;/strong&gt; 
+  &lt;span reference="blissymbolics.org/siren"&gt;in the event of a siren&lt;/span&gt;   
+  &lt;span reference="blissymbolics.org/goto"&gt; go to &lt;/span&gt;
+  &lt;span reference="blissymbolics.org/shelter" extrahelp="mysite/whatisashelter-easylang.html"&gt;
     the designated protected area
-  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  &lt;/span&gt; 
+&lt;/div&gt;</pre>
                       
                     </section>
 
