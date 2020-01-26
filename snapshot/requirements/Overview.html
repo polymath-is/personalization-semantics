@@ -743,7 +743,7 @@ var[data-type]:hover::before {
 			
 			<section id="more-help">
 				<h3 id="x1-7-more-help"><bdi class="secno">1.7 </bdi>More Help<a class="self-link" aria-label="§" href="#more-help"></a></h3>
-				<p>&gt;Some users may need additional information or specifically additional help information.</p>
+				<p>Some users may need additional information or specifically additional help information.</p>
 				<div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="4"><span>Editor's note</span></div><p class="">This isn't worded in use case language, so needs to be reformulated.</p></div>
 			</section>
 			
@@ -787,7 +787,7 @@ var[data-type]:hover::before {
                    Someone who is either easily distracted or can be easily overwhelmed with too much information on a web page needs the ability to simplify the page to just the critical information and suppress anything that is not integral to the understanding and use of the page. 
                 </p>
                  <p>
-                    Example: You want to get the latest weather report for your city and go to the <a href="www.weather.com">www.weather.com</a> website. Finding the actual weather forecast is actually a little challenging even if you have no disabilities due to all the advertisements above, beside and below the information you actually want, there is also today's top stories, trending news, and social media to ignore. If you are easily overwhelmed or distracted getting the key information about today's weather is a challenge. Having the ability to personalize and strip away all but the key information (i.e. just the weather forecast for my city) is critical for this user.
+                    Example: You want to get the latest weather report for your city and go to the <a href="https://www.weather.com">The Weather Channel</a> website. Finding the actual weather forecast is actually a little challenging even if you have no disabilities due to all the advertisements above, beside and below the information you actually want, there is also today's top stories, trending news, and social media to ignore. If you are easily overwhelmed or distracted getting the key information about today's weather is a challenge. Having the ability to personalize and strip away all but the key information (i.e. just the weather forecast for my city) is critical for this user.
                 </p>
                 <p>
                     In this example the author of this webpage would mark the &lt;section&gt;, &lt;p&gt;, or &lt;div&gt; that contains the actual weather report and any associated tools to manipulate the weather report (i.e. city search, hourly vs. 5 day forecast, etc.) as <code>data-simplification=critical</code>, and mark the other content as medium (default) or low.
@@ -802,7 +802,7 @@ var[data-type]:hover::before {
                     Someone who has dyscalculia and therefore has difficulty understanding numbers which means they have a hard time understanding websites that use numbers to convey information. Therefore this numeric information must be provided in an alternative format that the user can understand.
                 </p>
                  <p>
-                    Example: You want to get the latest weather report for your city and go to <a href="www.weather.com">www.weather.com</a>  website. For today’s forecast, it shows a high of 95°F and a low of 40°F, which is not helpful for this particular user. Allowing this numeric information to be presented instead as an image, symbol, or text would benefit the user (i.e. instead of 95°F, a picture of someone wearing shorts and a tee-shirt with the sun above or simply a text alternative of "Very warm", and instead of 40°F a picture of someone wearing a jacket with pants, or a text alternative of “Very cold”. Also for something like the humidity index of 90%, there could be a text alternative of “muggy”.
+                    Example: You want to get the latest weather report for your city and go to <a href="https://www.weather.com">The Weather Channel</a>  website. For today’s forecast, it shows a high of 95°F and a low of 40°F, which is not helpful for this particular user. Allowing this numeric information to be presented instead as an image, symbol, or text would benefit the user (i.e. instead of 95°F, a picture of someone wearing shorts and a tee-shirt with the sun above or simply a text alternative of "Very warm", and instead of 40°F a picture of someone wearing a jacket with pants, or a text alternative of “Very cold”. Also for something like the humidity index of 90%, there could be a text alternative of “muggy”.
                 </p>
                 <p>
                     In this example, the author would have the numbers marked up using <code>data-numberfree</code> where the default would show the numeric value but for those needing an alternative representation for numbers would get an associated image or description to be presented instead.
@@ -1070,7 +1070,7 @@ var[data-type]:hover::before {
    it seems that I myself may not be exactly on schedule
 &lt;/p&gt;</pre>
                             <h5 id="data-attributes-1">data-* Attributes - 1<a class="self-link" aria-label="§" href="#numberfree-and-easylang-1"></a></h5>
-                        <pre aria-busy="true"><div>
+                        <pre aria-busy="true">&lt;div&gt;
     &lt;span easylang="I'm running late"&gt;
         Comparing the present clock-reported time which is 
         &lt;span data-numberfree="midmorning"&gt;
@@ -1080,7 +1080,7 @@ var[data-type]:hover::before {
         yesterday, and made an agreement about, it seems that 
         I myself may not be exactly on schedule
     &lt;/span&gt;
-</div></pre>
+&lt;/div&gt;</pre>
                     </section>
                    <section id="numberfree-and-easylang-2">
                         <h4 id="x3-5-3-numberfree-and-easylang-2"><bdi class="secno">3.5.3 </bdi>Numberfree and easylang - 2<a class="self-link" aria-label="§" href="#numberfree-and-easylang-2"></a></h4>
@@ -1234,8 +1234,8 @@ var[data-type]:hover::before {
 						<li><code>Low</code> — used less then 20%.</li>
 					</ul>
 
-					<p>Fulfills use cases: <a href="#simplification" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">Simplification</a></p>
-					<p>Relevant properties: <a href="../content/#simplification"><code>simplification</code></a></p>
+					<p>Fulfills use cases: <a href="#simplification-1">Simplification</a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#simplification"><code>simplification</code></a></p>
 				</section>
 				
 				<section id="familiar-terms-and-symbols">
@@ -1250,15 +1250,15 @@ var[data-type]:hover::before {
 					<p>In order to display the appropriate content the supported syntax and terms must be standardized using attributes to associate symbols, terms, translations and explanations that are presented in a way that is understandable by various user scenarios.</p>
 
 					<p>Fulfills use cases: <a href="#adding-context">Adding Context</a></p>
-					<p>Relevant properties: <a href="../content/#action"><code>action</code></a>, <a href="#destination" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0"><code>destination</code></a>, <a href="../content/#field"><code>field</code></a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#action-explanation"><code>action</code></a>, <a href="#destination" class="respec-offending-element" ><code>destination</code></a>, <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#field-explanation"><code>field</code></a></p>
 				</section>
 
 				<section id="requirement-related-to-general-context">
 					<h4 id="x4-1-3-requirement-related-to-general-context"><bdi class="secno">4.1.3 </bdi>Requirement Related to General Context<a class="self-link" aria-label="§" href="#requirement-related-to-general-context"></a></h4>
 					<p>Optimize the personalization of a product or service's content to ensure it is appropriate for the current context of use as well as relevant for the user.</p>
-					<div class="note" id="issue-container-generatedID-11"><div role="heading" class="ednote-title marker" id="h-ednote-11" aria-level="5"><span>Editor's note</span></div><p class="">Needs more specific information about what the actual requirement is. Note the related property is a broken link.</p></div>
+					<div class="note" id="issue-container-generatedID-11"><div role="heading" class="ednote-title marker" id="h-ednote-11" aria-level="5"><span>Editor's note</span></div><p class="">Needs more specific information about what the actual requirement is. Note the related property with @@ prefix to be added.</p></div>
 					<p>Fulfills use cases: <a href="#general-context">General Context</a></p>
-					<p>Relevant properties: <a href="#context" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-1">@@context</a></p>
+					<p>Relevant properties: @@context</p>
 				</section>
 				
 				<section id="symbol-sets">
@@ -1266,7 +1266,7 @@ var[data-type]:hover::before {
 					<p>Create interoperable symbol sets for users with complex communication needs that require the use of Alternative and Augmentative Communication (AAC) systems. AAC systems are designed for people who are non-verbal that often use symbols with or without text. AAC end-users tend to only learn one symbol set and cannot easily communicate with other symbol users in a written format. In addition, they may struggle to understand different symbols that are used in different applications. It's important to note that some symbols may be subject to copyright, which means they cannot be shared across applications. However, there are open symbol sets that can be shared and mapped against concepts, generating representative text. This text can also be translated into different languages as well as used to display a different set of symbols.</p>
 					
 					<p>Fulfills use case: <a href="#interoperable-symbols">Interoperable Symbols</a></p>
-					<p>Relevant properties: <a href="#concept" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-2">@@concept</a></p>
+					<p>Relevant properties: @@concept</p>
 				</section>
 				
 				<section id="number-free">
@@ -1274,7 +1274,7 @@ var[data-type]:hover::before {
 					<p>Not everyone can understand numbers. The <code>numberfree</code> attribute is intended as an alternative text for people who can not understand the main content.</p>
 					<div class="note" id="issue-container-generatedID-12"><div role="heading" class="ednote-title marker" id="h-ednote-12" aria-level="5"><span>Editor's note</span></div><p class="">This needs to be made higher-level.</p></div>
 					<p>Fulfills use case: <a href="#non-numerical-comprehension">Non-Numerical Comprehension</a></p>
-					<p>Relevant properties: <a href="../help/#numberfree"><code>numberfree</code></a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#numberfree"><code>numberfree</code></a></p>
 				</section>
 				
 				<section id="indicate-alternate-language-complexity-of-same-content">
@@ -1283,7 +1283,7 @@ var[data-type]:hover::before {
 					<div class="note" id="issue-container-generatedID-13"><div role="heading" class="ednote-title marker" id="h-ednote-13" aria-level="5"><span>Editor's note</span></div><p class="">Needs more specific requirement.</p></div>
 					
 					<p>Fulfills use case: <a href="#alternate-language-complexity">Alternate Language Complexity</a></p>
-					<p>Relevant properties: <a href="../help/#alternative"><code>alternative</code></a>, <a href="#easylang" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-3"><code>easylang</code></a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#alternative-explanation"><code>alternative</code></a>, <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/##easylang-explanation"><code>easylang</code></a></p>
 				</section>
 				
 				<section id="indicate-non-literal-content">
@@ -1292,7 +1292,7 @@ var[data-type]:hover::before {
 					<div class="note" id="issue-container-generatedID-14"><div role="heading" class="ednote-title marker" id="h-ednote-14" aria-level="5"><span>Editor's note</span></div><p class="">Needs more specific requirement.</p></div>
 					
 					<p>Fulfills use case: <a href="#non-literal-text-and-images">Non-literal Text and Images</a></p>
-					<p>Relevant properties: <a href="../help/#literal"><code>literal</code></a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#literal-explanation"><code>literal</code></a></p>
 				</section>
 				
 				<section id="help-information">
@@ -1301,7 +1301,7 @@ var[data-type]:hover::before {
 					<div class="note" id="issue-container-generatedID-15"><div role="heading" class="ednote-title marker" id="h-ednote-15" aria-level="5"><span>Editor's note</span></div><p class="">Needs more specific requirement.</p></div>
 					
 					<p>Fulfills use case: <a href="#more-help">More Help</a></p>
-					<p>Relevant properties: <a href="../help/#moreinfo"><code>moreinfo</code></a>, <a href="../help/#extrahelp"><code>extrahelp</code></a>, <a href="../help/#helptype">helptype</a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#moreinfo-explanation"><code>moreinfo</code></a>, <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#extrahelp-explanation"><code>extrahelp</code></a>, <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#helptype-explanation">helptype</a></p>
 				</section>
 				
 				<section id="provide-feedback">
@@ -1310,7 +1310,7 @@ var[data-type]:hover::before {
 					<div class="note" id="issue-container-generatedID-16"><div role="heading" class="ednote-title marker" id="h-ednote-16" aria-level="5"><span>Editor's note</span></div><p class="">Needs more specific requirement.</p></div>
 					
 					<p>Fulfills use case: <a href="#explain-and-feedback">Explain and Feedback</a></p>
-					<p>Relevant properties: <a href="../help/#feedback"><code>feedback</code></a>, <a href="../help/#explain"><code>explain</code></a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#feedback-explanation"><code>feedback</code></a>, <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/#explain-explanation"><code>explain</code></a></p>
 				</section>
 				
 				<section id="step-indicator">
@@ -1320,9 +1320,8 @@ var[data-type]:hover::before {
 					<p>The suggested defined values allow an author to transform information associated with steps within a process or represent the entire user path including steps out of the context of a defined process and steps between defined processes into breadcrumbs or linked steps that identify completed tasks, allow the user to make edits to steps that have been completed and identify a user' current location in a user path.</p>
 					<div class="note" id="issue-container-generatedID-17"><div role="heading" class="ednote-title marker" id="h-ednote-17" aria-level="5"><span>Editor's note</span></div><p class="">Needs more clear requirement.</p></div>
 					
-					<p>Fulfills use case: <a href="indication-of-sequence-in-breadcrumbs">Indication of Sequence in Breadcrumbs</a></p>
-					<p>Relevant properties: <a href="#x3-1-all-the-stepindicator-properties" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-4">@@stepindicator</a>, <a href="#step" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-5">@@step</a>, <a href="#steplocation" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-6">@@steplocation</a>, <a href="#status" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-7">@@stepstatus</a>
-						<a href="#status" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-8">@@stepnumber</a>
+					<p>Fulfills use case: <a href="#indication-of-sequence-in-breadcrumbs">Indication of Sequence in Breadcrumbs</a></p>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-tools-1.0/#all-stepindicator-explanation">stepindicator</a>, @@step, @@steplocation, @@stepstatus, @@stepnumber
 					</p>
 				</section>
 				
@@ -1333,8 +1332,8 @@ var[data-type]:hover::before {
 					<div class="note" id="issue-container-generatedID-18"><div role="heading" class="ednote-title marker" id="h-ednote-18" aria-level="5"><span>Editor's note</span></div><p class="">Needs more clear requirement.</p></div>
 					
 					<p>Fulfills use case: <a href="#reminders-and-messages">Reminders and Messages</a></p>
-					<p>Relevant properties: <a href="../tools/#messagetime">message</a>
-						<a href="../tools/#messageimportance">messageimportance</a>, <a href="../tools/#messagefrom">messagefrom</a>, <a href="../tools/#messagecontext">messagegroup</a>, <a href="../tools/#messagetime">messagetime</a>
+					<p>Relevant properties: <a href="https://www.w3.org/TR/personalization-semantics-tools-1.0/#messagetime-explanation">message</a>
+						<a href="https://www.w3.org/TR/personalization-semantics-tools-1.0/#messageimportance-explanation">messageimportance</a>, <a href="https://www.w3.org/TR/personalization-semantics-tools-1.0/#messagefrom-explanation">messagefrom</a>, <a href="https://www.w3.org/TR/personalization-semantics-tools-1.0/#messagecontext-explanation">messagegroup</a>, <a href="https://www.w3.org/TR/personalization-semantics-tools-1.0/#messagetime-explanation">messagetime</a>
 					</p>
 				</section>
 				
