@@ -60,13 +60,27 @@ var biblio = {
 		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
 	},
 	"coga-issue-papers": {
-		"title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
+		"title": "Making content usable for people with cognitive and learning disabilities",
 		"href": "https://w3c.github.io/coga/issue-papers/",
 		"publisher": "W3C",
 		"editors":
 		[
 			"Lisa Seeman",
 			"Michael Cooper"
+		],
+		"etAl": "false",
+		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+	},
+		"coga-usable": {
+		"title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
+		"href": "https://www.w3.org/TR/coga-usable/",
+		"publisher": "W3C",
+		"editors":
+		[
+			"Lisa Seeman",
+			"Rachael Montgomery",
+			"Steve Lee",
+			"Ruoxi Ran"
 		],
 		"etAl": "false",
 		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
@@ -276,6 +290,21 @@ var biblio = {
 		"etAl": true,
 		"deliveredBy": [
 			"http://www.w3.org/WAI/PF/"
+		]
+	},
+	"WCAG22": {
+		"title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+		"href": "https://www.w3.org/TR/WCAG22/",
+		"status": "WD",
+		"publisher": "W3C",
+		"authors": [
+			"Andrew Kirkpatrick",
+			"Alastair Campbell",
+			"Michael Cooper"
+		],
+		"etAl": true,
+		"deliveredBy": [
+			"http://www.w3.org/WAI/GL/"
 		]
 	},
 	
