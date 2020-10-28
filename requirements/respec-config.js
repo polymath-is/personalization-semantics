@@ -62,7 +62,7 @@ var respecConfig = {
         w3cid: 34017
       },
       {
-        name: "Roy Ran",
+        name: "Ruoxi Ran",
         url: 'https://www.w3.org',
         mailto: "ran@w3.org",
         company: "W3C",
